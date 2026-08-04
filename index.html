@@ -3,133 +3,193 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Glamora | Premium Skincare</title>
+    <title>Glamora | Luxury Skincare</title>
 
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- ================= NAVIGATION ================= -->
+<div class="top-bar">
+    <p>✨ Free Shipping on Orders Over $50 | 10% OFF Your First Order</p>
+</div>
 
 <header>
 
     <div class="logo">
-        Glamora
+        GLAMORA
     </div>
 
-    <nav>
+    <div class="search">
 
-        <ul>
+        <input type="text" placeholder="Search products...">
 
-            <li><a href="#">Home</a></li>
+        <button>
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
 
-            <li><a href="#">Shop</a></li>
-
-            <li><a href="#">Categories</a></li>
-
-            <li><a href="#">About</a></li>
-
-            <li><a href="#">Contact</a></li>
-
-        </ul>
-
-    </nav>
+    </div>
 
     <div class="icons">
 
-        <i class="fa-solid fa-magnifying-glass"></i>
+        <a href="#"><i class="fa-regular fa-user"></i></a>
 
-        <i class="fa-solid fa-heart"></i>
+        <a href="#"><i class="fa-regular fa-heart"></i></a>
 
-        <i class="fa-solid fa-cart-shopping"></i>
-
-        <i class="fa-solid fa-user"></i>
+        <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
 
     </div>
 
 </header>
 
+<nav>
 
-<!-- ================= HERO SECTION ================= -->
+    <ul>
+
+        <li><a href="#">Home</a></li>
+
+        <li><a href="#">Shop</a></li>
+
+        <li><a href="#">Best Sellers</a></li>
+
+        <li><a href="#">New Arrivals</a></li>
+
+        <li><a href="#">Skin Care</a></li>
+
+        <li><a href="#">Brands</a></li>
+
+        <li><a href="#">Offers</a></li>
+
+        <li><a href="#">Contact</a></li>
+
+    </ul>
+
+</nav>
 
 <section class="hero">
 
-    <div class="hero-content">
+    <div class="hero-text">
 
-        <h1>Reveal Your Natural Glow</h1>
+        <span>NEW COLLECTION</span>
+
+        <h1>
+            Healthy Skin Starts Here
+        </h1>
 
         <p>
 
-            Premium skincare products made with clean ingredients,
-            designed to nourish, hydrate and brighten your skin.
+            Discover dermatologist-approved skincare designed
+            to nourish, hydrate and protect your natural glow.
 
         </p>
 
-        <a href="#" class="btn">Shop Now</a>
+        <a href="#" class="btn">
+            Shop Now
+        </a>
+
+    </div>
+
+    <div class="hero-image">
+
+        <img src="images/hero.png" alt="Hero Image">
 
     </div>
 
 </section>
 
+<section class="categories">
 
-<!-- ================= FEATURES ================= -->
+    <h2>Shop By Category</h2>
 
-<section class="features">
+    <div class="category-container">
 
-    <div class="feature">
+        <div class="category">
 
-        <i class="fa-solid fa-truck-fast"></i>
+            <img src="images/cleanser.jpg">
 
-        <h3>Free Shipping</h3>
+            <h3>Cleanser</h3>
 
-        <p>Free delivery on all orders over $50.</p>
+        </div>
 
-    </div>
+        <div class="category">
 
-    <div class="feature">
+            <img src="images/serum.jpg">
 
-        <i class="fa-solid fa-leaf"></i>
+            <h3>Serums</h3>
 
-        <h3>Natural Ingredients</h3>
+        </div>
 
-        <p>100% cruelty-free and dermatologist tested.</p>
+        <div class="category">
 
-    </div>
+            <img src="images/moisturizer.jpg">
 
-    <div class="feature">
+            <h3>Moisturizers</h3>
 
-        <i class="fa-solid fa-shield-heart"></i>
+        </div>
 
-        <h3>Trusted Quality</h3>
+        <div class="category">
 
-        <p>Loved by thousands of skincare enthusiasts.</p>
+            <img src="images/sunscreen.jpg">
+
+            <h3>Sunscreens</h3>
+
+        </div>
+
+        <div class="category">
+
+            <img src="images/mask.jpg">
+
+            <h3>Face Masks</h3>
+
+        </div>
 
     </div>
 
 </section>
-
-
-<!-- ================= PRODUCTS ================= -->
 
 <section class="products">
 
-    <h2>Featured Products</h2>
+    <h2>Best Sellers</h2>
 
-    <div class="product-container">
+    <div class="product-grid">
 
-        <div class="product-card">
+        <div class="product">
 
-            <img src="images/cleanser.jpg" alt="Cleanser">
+            <span class="badge">BEST SELLER</span>
+
+            <img src="images/product1.jpg">
+
+            <h3>Vitamin C Serum</h3>
+
+            <div class="stars">
+
+                ★★★★★
+
+            </div>
+
+            <p>$34.99</p>
+
+            <button>Add to Cart</button>
+
+        </div>
+
+        <div class="product">
+
+            <span class="badge">NEW</span>
+
+            <img src="images/product2.jpg">
 
             <h3>Hydrating Cleanser</h3>
+
+            <div class="stars">
+
+                ★★★★★
+
+            </div>
 
             <p>$24.99</p>
 
@@ -137,11 +197,107 @@
 
         </div>
 
-        <div class="product-card">
+        <div class="product">
 
-            <img src="images/serum.jpg" alt="Vitamin C Serum">
+            <img src="images/product3.jpg">
 
-            <h3>Vitamin C Serum</h3>
+            <h3>Glow Moisturizer</h3>
+
+            <div class="stars">
+
+                ★★★★★
+
+            </div>
+
+            <p>$28.99</p>
+
+            <button>Add to Cart</button>
+
+        </div>
+
+        <div class="product">
+
+            <img src="images/product4.jpg">
+
+            <h3>SPF 50 Sunscreen</h3>
+
+            <div class="stars">
+
+                ★★★★★
+
+            </div>
+
+            <p>$26.99</p>
+
+            <button>Add to Cart</button>
+
+        </div>
+
+        <div class="product">
+
+            <img src="images/product5.jpg">
+
+            <h3>Night Repair Cream</h3>
+
+            <div class="stars">
+
+                ★★★★★
+
+            </div>
+
+            <p>$42.99</p>
+
+            <button>Add to Cart</button>
+
+        </div>
+
+        <div class="product">
+
+            <img src="images/product6.jpg">
+
+            <h3>Niacinamide Serum</h3>
+
+            <div class="stars">
+
+                ★★★★★
+
+            </div>
+
+            <p>$32.99</p>
+
+            <button>Add to Cart</button>
+
+        </div>
+
+        <div class="product">
+
+            <img src="images/product7.jpg">
+
+            <h3>Clay Mask</h3>
+
+            <div class="stars">
+
+                ★★★★★
+
+            </div>
+
+            <p>$21.99</p>
+
+            <button>Add to Cart</button>
+
+        </div>
+
+        <div class="product">
+
+            <img src="images/product8.jpg">
+
+            <h3>Hyaluronic Acid</h3>
+
+            <div class="stars">
+
+                ★★★★★
+
+            </div>
 
             <p>$39.99</p>
 
@@ -149,131 +305,113 @@
 
         </div>
 
-        <div class="product-card">
-
-            <img src="images/moisturizer.jpg" alt="Moisturizer">
-
-            <h3>Glow Moisturizer</h3>
-
-            <p>$29.99</p>
-
-            <button>Add to Cart</button>
-
-        </div>
-
-        <div class="product-card">
-
-            <img src="images/sunscreen.jpg" alt="Sunscreen">
-
-            <h3>SPF 50 Sunscreen</h3>
-
-            <p>$22.99</p>
-
-            <button>Add to Cart</button>
-
-        </div>
-
     </div>
 
 </section>
 
+<section class="banner">
 
-<!-- ================= ABOUT ================= -->
+    <div class="banner-content">
 
-<section class="about">
-
-    <div class="about-content">
-
-        <h2>About Glamora</h2>
+        <h2>Luxury Skincare That Loves Your Skin</h2>
 
         <p>
 
-            At Glamora, we believe skincare should be simple,
-            luxurious and effective. Every product is carefully
-            formulated with premium ingredients to help you
-            achieve healthy, radiant skin.
+            Clean formulas, premium ingredients and visible results.
 
         </p>
 
-    </div>
+        <a href="#" class="btn">
 
-</section>
+            Explore Collection
 
-
-<!-- ================= WHY US ================= -->
-
-<section class="why-us">
-
-    <h2>Why Choose Glamora?</h2>
-
-    <div class="reasons">
-
-        <div>
-
-            <i class="fa-solid fa-droplet"></i>
-
-            <h3>Deep Hydration</h3>
-
-            <p>Restores moisture for glowing skin.</p>
-
-        </div>
-
-        <div>
-
-            <i class="fa-solid fa-seedling"></i>
-
-            <h3>Organic Formula</h3>
-
-            <p>Natural botanical extracts.</p>
-
-        </div>
-
-        <div>
-
-            <i class="fa-solid fa-star"></i>
-
-            <h3>Premium Quality</h3>
-
-            <p>Made with the highest standards.</p>
-
-        </div>
+        </a>
 
     </div>
 
 </section>
 
+<section class="skin-types">
 
-<!-- ================= TESTIMONIALS ================= -->
+    <h2>Shop By Skin Concern</h2>
 
-<section class="testimonials">
+    <div class="skin-grid">
+
+        <div class="skin-card">
+
+            <img src="images/acne.jpg">
+
+            <h3>Acne</h3>
+
+        </div>
+
+        <div class="skin-card">
+
+            <img src="images/dry.jpg">
+
+            <h3>Dry Skin</h3>
+
+        </div>
+
+        <div class="skin-card">
+
+            <img src="images/oily.jpg">
+
+            <h3>Oily Skin</h3>
+
+        </div>
+
+        <div class="skin-card">
+
+            <img src="images/sensitive.jpg">
+
+            <h3>Sensitive Skin</h3>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="reviews">
 
     <h2>What Our Customers Say</h2>
 
-    <div class="testimonial-container">
+    <div class="review-container">
 
-        <div class="testimonial">
+        <div class="review">
 
             <p>
 
-                "My skin has never looked better!
-                Glamora products completely changed my routine."
+                "Absolutely love Glamora. My skin has never looked better!"
 
             </p>
 
-            <h4>— Sarah M.</h4>
+            <h4>- Sarah M.</h4>
 
         </div>
 
-        <div class="testimonial">
+        <div class="review">
 
             <p>
 
-                "Excellent quality and beautiful packaging.
-                Highly recommended!"
+                "The products feel luxurious and actually work."
 
             </p>
 
-            <h4>— Emma L.</h4>
+            <h4>- Emma L.</h4>
+
+        </div>
+
+        <div class="review">
+
+            <p>
+
+                "Fast shipping and amazing customer service."
+
+            </p>
+
+            <h4>- Olivia K.</h4>
 
         </div>
 
@@ -281,28 +419,21 @@
 
 </section>
 
-
-<!-- ================= NEWSLETTER ================= -->
-
 <section class="newsletter">
 
-    <h2>Join Our Beauty Community</h2>
+    <h2>Join Our Community</h2>
 
     <p>
 
-        Subscribe to receive exclusive discounts,
-        skincare tips and new arrivals.
+        Subscribe for skincare tips and exclusive offers.
 
     </p>
 
     <form>
 
-        <input
-            type="email"
-            placeholder="Enter your email"
-            required>
+        <input type="email" placeholder="Enter your email">
 
-        <button type="submit">
+        <button>
 
             Subscribe
 
@@ -311,49 +442,103 @@
     </form>
 
 </section>
-
-
-<!-- ================= FOOTER ================= -->
-
 <footer>
 
-    <div class="footer-content">
+    <div class="footer-container">
 
-        <div>
+        <div class="footer-column">
 
-            <h3>Glamora</h3>
+            <h3>GLAMORA</h3>
 
             <p>
-                Premium skincare for radiant beauty.
+                Discover premium skincare crafted with high-quality ingredients
+                to help you achieve healthy, glowing skin every day.
             </p>
 
+            <div class="social-icons">
+
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+
+                <a href="#"><i class="fab fa-instagram"></i></a>
+
+                <a href="#"><i class="fab fa-pinterest-p"></i></a>
+
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+
+                <a href="#"><i class="fab fa-youtube"></i></a>
+
+            </div>
+
         </div>
 
-        <div>
+        <div class="footer-column">
 
-            <h3>Quick Links</h3>
+            <h3>Shop</h3>
 
-            <a href="#">Home</a>
+            <ul>
 
-            <a href="#">Shop</a>
+                <li><a href="#">Best Sellers</a></li>
 
-            <a href="#">About</a>
+                <li><a href="#">New Arrivals</a></li>
 
-            <a href="#">Contact</a>
+                <li><a href="#">Serums</a></li>
+
+                <li><a href="#">Moisturizers</a></li>
+
+                <li><a href="#">Sunscreens</a></li>
+
+                <li><a href="#">Face Masks</a></li>
+
+            </ul>
 
         </div>
 
-        <div>
+        <div class="footer-column">
 
-            <h3>Follow Us</h3>
+            <h3>Customer Care</h3>
 
-            <i class="fab fa-facebook"></i>
+            <ul>
 
-            <i class="fab fa-instagram"></i>
+                <li><a href="#">Contact Us</a></li>
 
-            <i class="fab fa-tiktok"></i>
+                <li><a href="#">FAQs</a></li>
 
-            <i class="fab fa-pinterest"></i>
+                <li><a href="#">Shipping</a></li>
+
+                <li><a href="#">Returns</a></li>
+
+                <li><a href="#">Track Order</a></li>
+
+                <li><a href="#">Privacy Policy</a></li>
+
+            </ul>
+
+        </div>
+
+        <div class="footer-column">
+
+            <h3>Newsletter</h3>
+
+            <p>
+
+                Sign up and receive exclusive offers,
+                skincare tips and early access to new collections.
+
+            </p>
+
+            <form class="footer-newsletter">
+
+                <input
+                    type="email"
+                    placeholder="Email address">
+
+                <button>
+
+                    Subscribe
+
+                </button>
+
+            </form>
 
         </div>
 
@@ -361,13 +546,31 @@
 
     <hr>
 
-    <p class="copyright">
+    <div class="footer-bottom">
 
-        © 2026 Glamora. All Rights Reserved.
+        <p>
 
-    </p>
+            © 2026 Glamora. All Rights Reserved.
+
+        </p>
+
+        <div class="payment-icons">
+
+            <i class="fab fa-cc-visa"></i>
+
+            <i class="fab fa-cc-mastercard"></i>
+
+            <i class="fab fa-cc-paypal"></i>
+
+            <i class="fab fa-cc-amex"></i>
+
+        </div>
+
+    </div>
 
 </footer>
+
+<script src="script.js"></script>
 
 </body>
 </html>
