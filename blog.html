@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Glamora | Beauty Journal</title>
+
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet"
+          href="blog.css">
+
+</head>
+
+
+<body>
+
+
+<!-- TOP BAR -->
+
+<div class="top-bar">
+
+    ✨ Free Shipping on Orders Over $50 | 10% OFF Your First Order
+
+</div>
+
+
+
+<!-- HEADER -->
+
+<header>
+
+    <div class="logo">
+
+        <a href="index.html">
+            GLAMORA
+        </a>
+
+    </div>
+
+
+    <div class="search-bar">
+
+        <input
+            type="text"
+            placeholder="Search articles..."
+            id="blogSearch"
+        >
+
+        <button type="button"
+                id="searchButton">
+
+            <i class="fas fa-search"></i>
+
+        </button>
+
+    </div>
+
+
+    <div class="header-icons">
+
+        <a href="#">
+            <i class="far fa-user"></i>
+        </a>
+
+        <a href="#">
+            <i class="far fa-heart"></i>
+        </a>
+
+        <a href="shop.html">
+            <i class="fas fa-shopping-cart"></i>
+        </a>
+
+    </div>
+
+</header>
+
+
+
+<!-- NAVIGATION -->
+
+<nav>
+
+    <ul>
+
+        <li>
+            <a href="index.html">
+                Home
+            </a>
+        </li>
+
+        <li>
+            <a href="shop.html">
+                Shop
+            </a>
+        </li>
+
+        <li>
+            <a href="about.html">
+                About
+            </a>
+        </li>
+
+        <li>
+            <a href="contact.html">
+                Contact
+            </a>
+        </li>
+
+        <li>
+            <a class="active"
+               href="blog.html">
+                Blog
+            </a>
+        </li>
+
+    </ul>
+
+</nav>
+
+
+
+<!-- BLOG HERO -->
+
+<section class="blog-hero">
+
+    <div class="blog-hero-content">
+
+        <span>
+            THE GLAMORA JOURNAL
+        </span>
+
+        <h1>
+            Beauty,<br>
+            Simplified.
+        </h1>
+
+        <p>
+            Discover skincare tips, beauty routines,
+            ingredient guides and inspiration designed
+            to help you understand and enjoy your skin.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- BREADCRUMB -->
+
+<div class="breadcrumb">
+
+    <a href="index.html">
+        Home
+    </a>
+
+    <span>/</span>
+
+    <span>
+        Blog
+    </span>
+
+</div>
+
+
+
+<!-- BLOG INTRO -->
+
+<section class="blog-intro">
+
+    <div class="section-heading">
+
+        <span class="section-label">
+            EXPLORE THE JOURNAL
+        </span>
+
+        <h2>
+            Skincare Stories & Tips
+        </h2>
+
+        <p>
+            From understanding skincare ingredients to
+            creating a simple daily routine, discover
+            helpful beauty content from Glamora.
+        </p>
+
+    </div>
+
+
+
+    <!-- CATEGORIES -->
+
+    <div class="blog-categories">
+
+        <button class="category-btn active"
+                data-category="all">
+
+            All
+
+        </button>
+
+        <button class="category-btn"
+                data-category="skincare">
+
+            Skincare
+
+        </button>
+
+        <button class="category-btn"
+                data-category="ingredients">
+
+            Ingredients
+
+        </button>
+
+        <button class="category-btn"
+                data-category="routine">
+
+            Routines
+
+        </button>
+
+        <button class="category-btn"
+                data-category="beauty">
+
+            Beauty Tips
+
+        </button>
+
+    </div>
+
+
+
+    <!-- FEATURED ARTICLE -->
+
+    <article class="featured-post"
+             data-category="skincare">
+
+        <div class="featured-image">
+
+            <img src="blog-featured.png"
+                 alt="Skincare routine">
+
+        </div>
+
+
+        <div class="featured-content">
+
+            <span class="post-category">
+                SKINCARE
+            </span>
+
+            <h2>
+                How to Build a Simple
+                Skincare Routine
+            </h2>
+
+            <p>
+                A good skincare routine doesn't need to be
+                complicated. Learn how to create simple
+                morning and evening steps that work together
+                to keep your skin looking healthy and radiant.
+            </p>
+
+            <div class="post-meta">
+
+                <span>
+                    <i class="far fa-calendar"></i>
+                    August 10, 2026
+                </span>
+
+                <span>
+                    5 min read
+                </span>
+
+            </div>
+
+            <button class="read-more"
+                    data-title="How to Build a Simple Skincare Routine">
+
+                Read Article
+
+                <i class="fas fa-arrow-right"></i>
+
+            </button>
+
+        </div>
+
+    </article>
+
+
+
+    <!-- BLOG GRID -->
+
+    <div class="blog-grid">
+
+
+        <!-- ARTICLE 1 -->
+
+        <article class="blog-card"
+                 data-category="ingredients">
+
+            <div class="blog-image">
+
+                <img src="blog-vitamin-c.png"
+                     alt="Vitamin C serum">
+
+                <span class="card-category">
+                    INGREDIENTS
+                </span>
+
+            </div>
+
+
+            <div class="blog-content">
+
+                <span class="post-date">
+                    AUGUST 08, 2026
+                </span>
+
+                <h3>
+                    Why Vitamin C Belongs
+                    in Your Skincare Routine
+                </h3>
+
+                <p>
+                    Discover the benefits of Vitamin C
+                    and how it can become part of your
+                    daily skincare routine.
+                </p>
+
+                <button class="read-more"
+                        data-title="Why Vitamin C Belongs in Your Skincare Routine">
+
+                    Read More
+
+                    <i class="fas fa-arrow-right"></i>
+
+                </button>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- ARTICLE 2 -->
+
+        <article class="blog-card"
+                 data-category="routine">
+
+            <div class="blog-image">
+
+                <img src="blog-night-routine.png"
+                     alt="Night skincare routine">
+
+                <span class="card-category">
+                    ROUTINES
+                </span>
+
+            </div>
+
+
+            <div class="blog-content">
+
+                <span class="post-date">
+                    AUGUST 05, 2026
+                </span>
+
+                <h3>
+                    Your Guide to a
+                    Nighttime Skincare Routine
+                </h3>
+
+                <p>
+                    Explore the essential steps that can
+                    make your evening skincare routine
+                    simple and relaxing.
+                </p>
+
+                <button class="read-more"
+                        data-title="Your Guide to a Nighttime Skincare Routine">
+
+                    Read More
+
+                    <i class="fas fa-arrow-right"></i>
+
+                </button>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- ARTICLE 3 -->
+
+        <article class="blog-card"
+                 data-category="beauty">
+
+            <div class="blog-image">
+
+                <img src="blog-sunscreen.png"
+                     alt="Sunscreen skincare">
+
+                <span class="card-category">
+                    BEAUTY TIPS
+                </span>
+
+            </div>
+
+
+            <div class="blog-content">
+
+                <span class="post-date">
+                    AUGUST 02, 2026
+                </span>
+
+                <h3>
+                    Why SPF Should Be
+                    an Everyday Essential
+                </h3>
+
+                <p>
+                    Learn why daily sun protection is an
+                    important part of a consistent skincare
+                    routine.
+                </p>
+
+                <button class="read-more"
+                        data-title="Why SPF Should Be an Everyday Essential">
+
+                    Read More
+
+                    <i class="fas fa-arrow-right"></i>
+
+                </button>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- ARTICLE 4 -->
+
+        <article class="blog-card"
+                 data-category="skincare">
+
+            <div class="blog-image">
+
+                <img src="blog-hydration.png"
+                     alt="Hydrating skincare">
+
+                <span class="card-category">
+                    SKINCARE
+                </span>
+
+            </div>
+
+
+            <div class="blog-content">
+
+                <span class="post-date">
+                    JULY 30, 2026
+                </span>
+
+                <h3>
+                    How to Keep Your Skin
+                    Hydrated All Day
+                </h3>
+
+                <p>
+                    Simple habits and skincare steps that
+                    can help your skin feel comfortable,
+                    soft and hydrated.
+                </p>
+
+                <button class="read-more"
+                        data-title="How to Keep Your Skin Hydrated All Day">
+
+                    Read More
+
+                    <i class="fas fa-arrow-right"></i>
+
+                </button>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- ARTICLE 5 -->
+
+        <article class="blog-card"
+                 data-category="ingredients">
+
+            <div class="blog-image">
+
+                <img src="blog-niacinamide.png"
+                     alt="Niacinamide serum">
+
+                <span class="card-category">
+                    INGREDIENTS
+                </span>
+
+            </div>
+
+
+            <div class="blog-content">
+
+                <span class="post-date">
+                    JULY 27, 2026
+                </span>
+
+                <h3>
+                    Understanding
+                    Niacinamide
+                </h3>
+
+                <p>
+                    Learn about one of the most popular
+                    skincare ingredients and where it can
+                    fit into your routine.
+                </p>
+
+                <button class="read-more"
+                        data-title="Understanding Niacinamide">
+
+                    Read More
+
+                    <i class="fas fa-arrow-right"></i>
+
+                </button>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- ARTICLE 6 -->
+
+        <article class="blog-card"
+                 data-category="beauty">
+
+            <div class="blog-image">
+
+                <img src="blog-selfcare.png"
+                     alt="Skincare self care">
+
+                <span class="card-category">
+                    BEAUTY TIPS
+                </span>
+
+            </div>
+
+
+            <div class="blog-content">
+
+                <span class="post-date">
+                    JULY 24, 2026
+                </span>
+
+                <h3>
+                    Make Your Skincare
+                    Routine a Self-Care Ritual
+                </h3>
+
+                <p>
+                    Turn your everyday skincare routine
+                    into a calming moment dedicated
+                    entirely to yourself.
+                </p>
+
+                <button class="read-more"
+                        data-title="Make Your Skincare Routine a Self-Care Ritual">
+
+                    Read More
+
+                    <i class="fas fa-arrow-right"></i>
+
+                </button>
+
+            </div>
+
+        </article>
+
+
+    </div>
+
+</section>
+<!-- NEWSLETTER -->
+
+<section class="newsletter">
+
+    <h2>
+        Join the Glamora Community
+    </h2>
+
+    <p>
+        Get skincare tips, beauty inspiration,
+        new product launches and exclusive offers.
+    </p>
+
+    <form id="newsletterForm">
+
+        <input
+            type="email"
+            placeholder="Enter your email address"
+            required
+        >
+
+        <button type="submit">
+            Subscribe
+        </button>
+
+    </form>
+
+    <p id="newsletterMessage"
+       class="newsletter-message"></p>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="footer-container">
+
+
+        <!-- BRAND -->
+
+        <div class="footer-column">
+
+            <h3>
+                GLAMORA
+            </h3>
+
+            <p>
+                Luxury skincare designed to help you
+                discover healthy, radiant skin and feel
+                confident in your own routine.
+            </p>
+
+
+            <div class="social-icons">
+
+                <a href="#">
+                    <i class="fab fa-instagram"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fab fa-pinterest"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- SHOP -->
+
+        <div class="footer-column">
+
+            <h3>
+                Shop
+            </h3>
+
+            <ul>
+
+                <li>
+                    <a href="shop.html">
+                        All Products
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Best Sellers
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        New Arrivals
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Serums
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Moisturizers
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- CUSTOMER CARE -->
+
+        <div class="footer-column">
+
+            <h3>
+                Customer Care
+            </h3>
+
+            <ul>
+
+                <li>
+                    <a href="contact.html">
+                        Contact Us
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Shipping & Delivery
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Returns
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        FAQs
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Privacy Policy
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- CONTACT -->
+
+        <div class="footer-column">
+
+            <h3>
+                Contact
+            </h3>
+
+            <p>
+
+                <i class="fas fa-envelope"></i>
+
+                hello@glamora.com
+
+            </p>
+
+            <p>
+
+                <i class="fas fa-phone"></i>
+
+                +1 234 567 890
+
+            </p>
+
+            <p>
+
+                <i class="fas fa-location-dot"></i>
+
+                123 Beauty Avenue
+
+            </p>
+
+            <p>
+
+                <i class="fas fa-clock"></i>
+
+                Mon - Fri: 9AM - 6PM
+
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- FOOTER BOTTOM -->
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 Glamora. All Rights Reserved.
+        </p>
+
+        <div class="payment-icons">
+
+            <i class="fab fa-cc-visa"></i>
+
+            <i class="fab fa-cc-mastercard"></i>
+
+            <i class="fab fa-cc-amex"></i>
+
+            <i class="fab fa-cc-paypal"></i>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- BLOG JAVASCRIPT -->
+
+<script src="blog.js"></script>
+
+</body>
+
+</html>
