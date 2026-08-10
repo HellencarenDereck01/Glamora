@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Your Cart | Glamora</title>
+
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet"
+          href="cart.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     TOP BAR
+========================================= -->
+
+<div class="top-bar">
+
+    ✨ Free Shipping on Orders Over $50 | 10% OFF Your First Order
+
+</div>
+
+
+
+<!-- =========================================
+     HEADER
+========================================= -->
+
+<header>
+
+    <div class="logo">
+
+        <a href="index.html">
+            GLAMORA
+        </a>
+
+    </div>
+
+
+    <div class="search-bar">
+
+        <input
+            type="text"
+            id="cartSearch"
+            placeholder="Search products..."
+        >
+
+        <button
+            type="button"
+            id="searchButton">
+
+            <i class="fas fa-search"></i>
+
+        </button>
+
+    </div>
+
+
+    <div class="header-icons">
+
+        <a href="#"
+           aria-label="Account">
+
+            <i class="far fa-user"></i>
+
+        </a>
+
+
+        <a href="#"
+           aria-label="Wishlist">
+
+            <i class="far fa-heart"></i>
+
+        </a>
+
+
+        <a href="cart.html"
+           class="cart-link"
+           aria-label="Shopping cart">
+
+            <i class="fas fa-shopping-cart"></i>
+
+            <span
+                id="cartCount"
+                class="cart-count">
+
+                0
+
+            </span>
+
+        </a>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================================
+     NAVIGATION
+========================================= -->
+
+<nav>
+
+    <ul>
+
+        <li>
+
+            <a href="index.html">
+                Home
+            </a>
+
+        </li>
+
+
+        <li>
+
+            <a href="shop.html">
+                Shop
+            </a>
+
+        </li>
+
+
+        <li>
+
+            <a href="about.html">
+                About
+            </a>
+
+        </li>
+
+
+        <li>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </li>
+
+
+        <li>
+
+            <a href="blog.html">
+                Blog
+            </a>
+
+        </li>
+
+    </ul>
+
+</nav>
+
+
+
+<!-- =========================================
+     BREADCRUMB
+========================================= -->
+
+<div class="breadcrumb">
+
+    <a href="index.html">
+        Home
+    </a>
+
+    <span>
+        /
+    </span>
+
+    <span>
+        Shopping Cart
+    </span>
+
+</div>
+
+
+
+<!-- =========================================
+     CART HERO
+========================================= -->
+
+<section class="cart-hero">
+
+    <div>
+
+        <span class="section-label">
+            YOUR GLAMORA BAG
+        </span>
+
+        <h1>
+            Shopping Cart
+        </h1>
+
+        <p>
+            Review your beauty essentials before
+            heading to checkout.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     CART SECTION
+========================================= -->
+
+<main>
+
+<section class="cart-section">
+
+
+    <!-- =====================================
+         CART ITEMS
+    ====================================== -->
+
+    <div class="cart-main">
+
+        <div class="cart-header">
+
+            <h2>
+                Your Items
+            </h2>
+
+            <span id="cartItemLabel">
+                0 items
+            </span>
+
+        </div>
+
+
+        <!-- CART ITEMS WILL BE INSERTED HERE -->
+
+        <div
+            id="cartItems"
+            class="cart-items">
+
+        </div>
+
+
+        <!-- EMPTY CART -->
+
+        <div
+            id="emptyCart"
+            class="empty-cart">
+
+            <div class="empty-cart-icon">
+
+                <i class="fas fa-shopping-bag"></i>
+
+            </div>
+
+            <h2>
+                Your cart is empty
+            </h2>
+
+            <p>
+                Looks like you haven't added any
+                beauty essentials yet.
+            </p>
+
+            <a
+                href="shop.html"
+                class="continue-shopping">
+
+                Continue Shopping
+
+                <i class="fas fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+
+        <!-- CONTINUE SHOPPING -->
+
+        <a
+            href="shop.html"
+            class="back-to-shop">
+
+            <i class="fas fa-arrow-left"></i>
+
+            Continue Shopping
+
+        </a>
+
+    </div>
+
+
+
+    <!-- =====================================
+         ORDER SUMMARY
+    ====================================== -->
+
+    <aside class="cart-summary">
+
+        <h2>
+            Order Summary
+        </h2>
+
+
+        <div class="summary-row">
+
+            <span>
+                Subtotal
+            </span>
+
+            <strong id="subtotal">
+                $0.00
+            </strong>
+
+        </div>
+
+
+        <div class="summary-row">
+
+            <span>
+                Shipping
+            </span>
+
+            <strong id="shipping">
+                $0.00
+            </strong>
+
+        </div>
+
+
+        <div class="summary-row">
+
+            <span>
+                Discount
+            </span>
+
+            <strong id="discount">
+                -$0.00
+            </strong>
+
+        </div>
+
+
+        <div class="summary-divider"></div>
+
+
+        <div class="summary-total">
+
+            <span>
+                Total
+            </span>
+
+            <strong id="total">
+                $0.00
+            </strong>
+
+        </div>
+
+
+        <!-- PROMO CODE -->
+
+        <div class="promo-section">
+
+            <label for="promoCode">
+                Have a promo code?
+            </label>
+
+
+            <div class="promo-input">
+
+                <input
+                    type="text"
+                    id="promoCode"
+                    placeholder="Enter code"
+                >
+
+                <button
+                    type="button"
+                    id="applyPromo">
+
+                    Apply
+
+                </button>
+
+            </div>
+
+
+            <p
+                id="promoMessage"
+                class="promo-message">
+            </p>
+
+        </div>
+
+
+        <!-- CHECKOUT -->
+
+        <button
+            type="button"
+            id="checkoutButton"
+            class="checkout-btn">
+
+            Proceed to Checkout
+
+            <i class="fas fa-arrow-right"></i>
+
+        </button>
+
+
+        <!-- SECURITY -->
+
+        <div class="checkout-security">
+
+            <div>
+
+                <i class="fas fa-lock"></i>
+
+                <span>
+                    Secure Checkout
+                </span>
+
+            </div>
+
+            <div>
+
+                <i class="fas fa-shield-halved"></i>
+
+                <span>
+                    Your information is protected
+                </span>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+</section>
+<!-- =========================================
+     FREE SHIPPING BANNER
+========================================= -->
+
+<section class="shipping-banner">
+
+    <div class="shipping-banner-icon">
+
+        <i class="fas fa-truck"></i>
+
+    </div>
+
+    <div>
+
+        <h3>
+            Free Shipping on Orders Over $50
+        </h3>
+
+        <p>
+            Add a little more to your bag and enjoy
+            complimentary shipping.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     YOU MAY ALSO LIKE
+========================================= -->
+
+<section class="cart-recommendations">
+
+    <div class="section-heading">
+
+        <span class="section-label">
+            COMPLETE YOUR ROUTINE
+        </span>
+
+        <h2>
+            You May Also Like
+        </h2>
+
+    </div>
+
+
+    <div class="recommendation-grid">
+
+
+        <!-- PRODUCT 1 -->
+
+        <article class="recommendation-card">
+
+            <div class="recommendation-image">
+
+                <span class="recommendation-badge">
+                    BEST SELLER
+                </span>
+
+                <img
+                    src="vitamin-c-serum.png"
+                    alt="Vitamin C Glow Serum"
+                >
+
+                <button
+                    class="recommendation-wishlist"
+                    aria-label="Add to wishlist">
+
+                    <i class="far fa-heart"></i>
+
+                </button>
+
+            </div>
+
+
+            <div class="recommendation-info">
+
+                <span>
+                    SERUM
+                </span>
+
+                <h3>
+                    Vitamin C Glow Serum
+                </h3>
+
+                <strong>
+                    $24.99
+                </strong>
+
+                <button
+                    class="quick-add"
+                    data-product="vitamin-c-serum">
+
+                    Quick Add
+
+                </button>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- PRODUCT 2 -->
+
+        <article class="recommendation-card">
+
+            <div class="recommendation-image">
+
+                <img
+                    src="hydrating-cleanser.png"
+                    alt="Hydrating Cleanser"
+                >
+
+                <button
+                    class="recommendation-wishlist"
+                    aria-label="Add to wishlist">
+
+                    <i class="far fa-heart"></i>
+
+                </button>
+
+            </div>
+
+
+            <div class="recommendation-info">
+
+                <span>
+                    CLEANSER
+                </span>
+
+                <h3>
+                    Hydrating Cleanser
+                </h3>
+
+                <strong>
+                    $18.99
+                </strong>
+
+                <button
+                    class="quick-add"
+                    data-product="hydrating-cleanser">
+
+                    Quick Add
+
+                </button>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- PRODUCT 3 -->
+
+        <article class="recommendation-card">
+
+            <div class="recommendation-image">
+
+                <img
+                    src="glow-moisturizer.png"
+                    alt="Glow Moisturizer"
+                >
+
+                <button
+                    class="recommendation-wishlist"
+                    aria-label="Add to wishlist">
+
+                    <i class="far fa-heart"></i>
+
+                </button>
+
+            </div>
+
+
+            <div class="recommendation-info">
+
+                <span>
+                    MOISTURIZER
+                </span>
+
+                <h3>
+                    Glow Moisturizer
+                </h3>
+
+                <strong>
+                    $22.99
+                </strong>
+
+                <button
+                    class="quick-add"
+                    data-product="glow-moisturizer">
+
+                    Quick Add
+
+                </button>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- PRODUCT 4 -->
+
+        <article class="recommendation-card">
+
+            <div class="recommendation-image">
+
+                <span class="recommendation-badge">
+                    NEW
+                </span>
+
+                <img
+                    src="niacinamide-serum.png"
+                    alt="Niacinamide Serum"
+                >
+
+                <button
+                    class="recommendation-wishlist"
+                    aria-label="Add to wishlist">
+
+                    <i class="far fa-heart"></i>
+
+                </button>
+
+            </div>
+
+
+            <div class="recommendation-info">
+
+                <span>
+                    SERUM
+                </span>
+
+                <h3>
+                    Niacinamide Serum
+                </h3>
+
+                <strong>
+                    $21.99
+                </strong>
+
+                <button
+                    class="quick-add"
+                    data-product="niacinamide-serum">
+
+                    Quick Add
+
+                </button>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     NEWSLETTER
+========================================= -->
+
+<section class="newsletter">
+
+    <h2>
+        Join the Glamora Community
+    </h2>
+
+    <p>
+        Get skincare tips, beauty inspiration,
+        new product launches and exclusive offers.
+    </p>
+
+
+    <form id="newsletterForm">
+
+        <input
+            type="email"
+            placeholder="Enter your email address"
+            required
+        >
+
+        <button type="submit">
+            Subscribe
+        </button>
+
+    </form>
+
+
+    <p
+        id="newsletterMessage"
+        class="newsletter-message">
+    </p>
+
+</section>
+
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer>
+
+    <div class="footer-container">
+
+
+        <!-- BRAND -->
+
+        <div class="footer-column">
+
+            <h3>
+                GLAMORA
+            </h3>
+
+            <p>
+                Luxury skincare designed to help you
+                discover healthy, radiant skin and feel
+                confident in your own routine.
+            </p>
+
+
+            <div class="social-icons">
+
+                <a href="#"
+                   aria-label="Instagram">
+
+                    <i class="fab fa-instagram"></i>
+
+                </a>
+
+                <a href="#"
+                   aria-label="Facebook">
+
+                    <i class="fab fa-facebook-f"></i>
+
+                </a>
+
+                <a href="#"
+                   aria-label="TikTok">
+
+                    <i class="fab fa-tiktok"></i>
+
+                </a>
+
+                <a href="#"
+                   aria-label="Pinterest">
+
+                    <i class="fab fa-pinterest"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- SHOP -->
+
+        <div class="footer-column">
+
+            <h3>
+                Shop
+            </h3>
+
+            <ul>
+
+                <li>
+                    <a href="shop.html">
+                        All Products
+                    </a>
+                </li>
+
+                <li>
+                    <a href="shop.html">
+                        Best Sellers
+                    </a>
+                </li>
+
+                <li>
+                    <a href="shop.html">
+                        New Arrivals
+                    </a>
+                </li>
+
+                <li>
+                    <a href="shop.html">
+                        Serums
+                    </a>
+                </li>
+
+                <li>
+                    <a href="shop.html">
+                        Moisturizers
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+
+        <!-- CUSTOMER CARE -->
+
+        <div class="footer-column">
+
+            <h3>
+                Customer Care
+            </h3>
+
+            <ul>
+
+                <li>
+                    <a href="contact.html">
+                        Contact Us
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Shipping & Delivery
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Returns
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html">
+                        FAQs
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Privacy Policy
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+
+        <!-- CONTACT -->
+
+        <div class="footer-column">
+
+            <h3>
+                Contact
+            </h3>
+
+            <p>
+
+                <i class="fas fa-envelope"></i>
+
+                hello@glamora.com
+
+            </p>
+
+            <p>
+
+                <i class="fas fa-phone"></i>
+
+                +1 234 567 890
+
+            </p>
+
+            <p>
+
+                <i class="fas fa-location-dot"></i>
+
+                123 Beauty Avenue
+
+            </p>
+
+            <p>
+
+                <i class="fas fa-clock"></i>
+
+                Mon - Fri: 9AM - 6PM
+
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- FOOTER BOTTOM -->
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 Glamora. All Rights Reserved.
+        </p>
+
+
+        <div class="payment-icons">
+
+            <i class="fab fa-cc-visa"></i>
+
+            <i class="fab fa-cc-mastercard"></i>
+
+            <i class="fab fa-cc-amex"></i>
+
+            <i class="fab fa-cc-paypal"></i>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =========================================
+     CART JAVASCRIPT
+========================================= -->
+
+<script src="cart.js"></script>
+
+</body>
+
+</html>
