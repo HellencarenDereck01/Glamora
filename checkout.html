@@ -1,0 +1,1279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Checkout | Glamora</title>
+
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet"
+          href="checkout.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     TOP BAR
+========================================= -->
+
+<div class="top-bar">
+
+    ✨ Secure Checkout | Your Beauty Is Our Priority
+
+</div>
+
+
+
+<!-- =========================================
+     HEADER
+========================================= -->
+
+<header>
+
+    <div class="logo">
+
+        <a href="index.html">
+            GLAMORA
+        </a>
+
+    </div>
+
+
+    <div class="checkout-header">
+
+        <i class="fas fa-lock"></i>
+
+        <span>
+            Secure Checkout
+        </span>
+
+    </div>
+
+
+    <a
+        href="cart.html"
+        class="back-cart">
+
+        <i class="fas fa-arrow-left"></i>
+
+        Back to Cart
+
+    </a>
+
+</header>
+
+
+
+<!-- =========================================
+     CHECKOUT PROGRESS
+========================================= -->
+
+<section class="checkout-progress">
+
+    <div class="progress-step active">
+
+        <span>
+            1
+        </span>
+
+        <strong>
+            Information
+        </strong>
+
+    </div>
+
+
+    <div class="progress-line"></div>
+
+
+    <div class="progress-step">
+
+        <span>
+            2
+        </span>
+
+        <strong>
+            Delivery
+        </strong>
+
+    </div>
+
+
+    <div class="progress-line"></div>
+
+
+    <div class="progress-step">
+
+        <span>
+            3
+        </span>
+
+        <strong>
+            Payment
+        </strong>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     CHECKOUT MAIN
+========================================= -->
+
+<main class="checkout-container">
+
+
+    <!-- =====================================
+         CHECKOUT FORM
+    ====================================== -->
+
+    <section class="checkout-form-section">
+
+        <form id="checkoutForm">
+
+
+            <!-- =================================
+                 CONTACT INFORMATION
+            ================================== -->
+
+            <div class="checkout-card">
+
+                <div class="card-heading">
+
+                    <span class="card-number">
+                        01
+                    </span>
+
+                    <div>
+
+                        <h2>
+                            Contact Information
+                        </h2>
+
+                        <p>
+                            We'll use this information
+                            to contact you about your order.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="you@example.com"
+                        required
+                    >
+
+                </div>
+
+
+                <label class="checkbox-label">
+
+                    <input
+                        type="checkbox"
+                        id="emailUpdates"
+                    >
+
+                    <span>
+                        Email me with beauty tips,
+                        new arrivals and exclusive offers.
+                    </span>
+
+                </label>
+
+            </div>
+
+
+
+            <!-- =================================
+                 DELIVERY INFORMATION
+            ================================== -->
+
+            <div class="checkout-card">
+
+                <div class="card-heading">
+
+                    <span class="card-number">
+                        02
+                    </span>
+
+                    <div>
+
+                        <h2>
+                            Delivery Information
+                        </h2>
+
+                        <p>
+                            Where should we deliver
+                            your Glamora order?
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- NAME -->
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="firstName">
+                            First Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="firstName"
+                            name="firstName"
+                            placeholder="First name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="lastName">
+                            Last Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="lastName"
+                            name="lastName"
+                            placeholder="Last name"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- PHONE -->
+
+                <div class="form-group">
+
+                    <label for="phone">
+                        Phone Number
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="+255 700 000 000"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- COUNTRY -->
+
+                <div class="form-group">
+
+                    <label for="country">
+                        Country
+                    </label>
+
+                    <select
+                        id="country"
+                        name="country"
+                        required>
+
+                        <option value="">
+                            Select country
+                        </option>
+
+                        <option value="Tanzania">
+                            Tanzania
+                        </option>
+
+                        <option value="India">
+                            India
+                        </option>
+
+                        <option value="Kenya">
+                            Kenya
+                        </option>
+
+                        <option value="Uganda">
+                            Uganda
+                        </option>
+
+                        <option value="Rwanda">
+                            Rwanda
+                        </option>
+
+                        <option value="South Africa">
+                            South Africa
+                        </option>
+
+                        <option value="United States">
+                            United States
+                        </option>
+
+                        <option value="United Kingdom">
+                            United Kingdom
+                        </option>
+
+                        <option value="Canada">
+                            Canada
+                        </option>
+
+                        <option value="Other">
+                            Other
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- ADDRESS -->
+
+                <div class="form-group">
+
+                    <label for="address">
+                        Street Address
+                    </label>
+
+                    <input
+                        type="text"
+                        id="address"
+                        name="address"
+                        placeholder="Street address"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- CITY / REGION -->
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="city">
+                            City
+                        </label>
+
+                        <input
+                            type="text"
+                            id="city"
+                            name="city"
+                            placeholder="City"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="region">
+                            State / Region
+                        </label>
+
+                        <input
+                            type="text"
+                            id="region"
+                            name="region"
+                            placeholder="State or region"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- POSTAL CODE -->
+
+                <div class="form-group">
+
+                    <label for="postalCode">
+                        Postal Code
+                    </label>
+
+                    <input
+                        type="text"
+                        id="postalCode"
+                        name="postalCode"
+                        placeholder="Postal code"
+                    >
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================
+                 SHIPPING METHOD
+            ================================== -->
+
+            <div class="checkout-card">
+
+                <div class="card-heading">
+
+                    <span class="card-number">
+                        03
+                    </span>
+
+                    <div>
+
+                        <h2>
+                            Shipping Method
+                        </h2>
+
+                        <p>
+                            Choose how you'd like
+                            to receive your order.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="shipping-options">
+
+
+                    <!-- STANDARD -->
+
+                    <label class="shipping-option">
+
+                        <input
+                            type="radio"
+                            name="shippingMethod"
+                            value="standard"
+                            checked
+                        >
+
+                        <div class="shipping-option-content">
+
+                            <div>
+
+                                <strong>
+                                    Standard Delivery
+                                </strong>
+
+                                <span>
+                                    5–7 business days
+                                </span>
+
+                            </div>
+
+                            <strong
+                                id="standardShipping">
+
+                                $5.99
+
+                            </strong>
+
+                        </div>
+
+                    </label>
+
+
+                    <!-- EXPRESS -->
+
+                    <label class="shipping-option">
+
+                        <input
+                            type="radio"
+                            name="shippingMethod"
+                            value="express"
+                        >
+
+                        <div class="shipping-option-content">
+
+                            <div>
+
+                                <strong>
+                                    Express Delivery
+                                </strong>
+
+                                <span>
+                                    2–3 business days
+                                </span>
+
+                            </div>
+
+                            <strong>
+                                $12.99
+                            </strong>
+
+                        </div>
+
+                    </label>
+
+
+                    <!-- FREE -->
+
+                    <label class="shipping-option">
+
+                        <input
+                            type="radio"
+                            name="shippingMethod"
+                            value="free"
+                        >
+
+                        <div class="shipping-option-content">
+
+                            <div>
+
+                                <strong>
+                                    Free Delivery
+                                </strong>
+
+                                <span>
+                                    7–10 business days
+                                </span>
+
+                            </div>
+
+                            <strong>
+                                FREE
+                            </strong>
+
+                        </div>
+
+                    </label>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================
+                 PAYMENT
+            ================================== -->
+
+            <div class="checkout-card">
+
+                <div class="card-heading">
+
+                    <span class="card-number">
+                        04
+                    </span>
+
+                    <div>
+
+                        <h2>
+                            Payment
+                        </h2>
+
+                        <p>
+                            Choose your preferred
+                            payment method.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PAYMENT METHODS -->
+
+                <div class="payment-methods">
+
+                    <label class="payment-method active">
+
+                        <input
+                            type="radio"
+                            name="paymentMethod"
+                            value="card"
+                            checked
+                        >
+
+                        <div>
+
+                            <i class="far fa-credit-card"></i>
+
+                            <span>
+                                Card
+                            </span>
+
+                        </div>
+
+                    </label>
+
+
+                    <label class="payment-method">
+
+                        <input
+                            type="radio"
+                            name="paymentMethod"
+                            value="paypal"
+                        >
+
+                        <div>
+
+                            <i class="fab fa-paypal"></i>
+
+                            <span>
+                                PayPal
+                            </span>
+
+                        </div>
+
+                    </label>
+
+
+                    <label class="payment-method">
+
+                        <input
+                            type="radio"
+                            name="paymentMethod"
+                            value="cash"
+                        >
+
+                        <div>
+
+                            <i class="fas fa-money-bill-wave"></i>
+
+                            <span>
+                                Cash on Delivery
+                            </span>
+
+                        </div>
+
+                    </label>
+
+                </div>
+
+
+                <!-- CARD DETAILS -->
+
+                <div
+                    id="cardDetails"
+                    class="card-details">
+
+                    <div class="form-group">
+
+                        <label for="cardName">
+                            Name on Card
+                        </label>
+
+                        <input
+                            type="text"
+                            id="cardName"
+                            placeholder="Name on card"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="cardNumber">
+                            Card Number
+                        </label>
+
+                        <div class="input-icon">
+
+                            <input
+                                type="text"
+                                id="cardNumber"
+                                placeholder="1234 5678 9012 3456"
+                                maxlength="19"
+                            >
+
+                            <i class="far fa-credit-card"></i>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+
+                            <label for="expiry">
+                                Expiry Date
+                            </label>
+
+                            <input
+                                type="text"
+                                id="expiry"
+                                placeholder="MM / YY"
+                                maxlength="7"
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="cvv">
+                                CVV
+                            </label>
+
+                            <input
+                                type="password"
+                                id="cvv"
+                                placeholder="•••"
+                                maxlength="4"
+                            >
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SECURITY -->
+
+                <div class="payment-security">
+
+                    <i class="fas fa-lock"></i>
+
+                    <span>
+                        Your payment information is encrypted
+                        and secure.
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================
+                 PLACE ORDER
+            ================================== -->
+
+            <button
+                type="submit"
+                class="place-order-btn">
+
+                <span>
+                    Place Order
+                </span>
+
+                <i class="fas fa-arrow-right"></i>
+
+            </button>
+
+
+            <p
+                id="checkoutMessage"
+                class="checkout-message">
+            </p>
+
+        </form>
+
+    </section>
+
+
+
+    <!-- =====================================
+         ORDER SUMMARY
+    ====================================== -->
+
+    <aside class="checkout-summary">
+
+        <div class="summary-header">
+
+            <h2>
+                Your Order
+            </h2>
+
+            <a href="cart.html">
+                Edit Cart
+            </a>
+
+        </div>
+
+
+        <!-- PRODUCTS -->
+
+        <div
+            id="checkoutItems"
+            class="checkout-items">
+
+        </div>
+
+
+        <!-- SUMMARY -->
+
+        <div class="summary-calculation">
+
+            <div class="summary-row">
+
+                <span>
+                    Subtotal
+                </span>
+
+                <strong id="checkoutSubtotal">
+                    $0.00
+                </strong>
+
+            </div>
+
+
+            <div class="summary-row">
+
+                <span>
+                    Shipping
+                </span>
+
+                <strong id="checkoutShipping">
+                    $5.99
+                </strong>
+
+            </div>
+
+
+            <div class="summary-row">
+
+                <span>
+                    Discount
+                </span>
+
+                <strong id="checkoutDiscount">
+                    -$0.00
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <div class="summary-total">
+
+            <span>
+                Total
+            </span>
+
+            <strong id="checkoutTotal">
+                $0.00
+            </strong>
+
+        </div>
+
+
+        <!-- TRUST -->
+
+        <div class="checkout-trust">
+
+            <div>
+
+                <i class="fas fa-lock"></i>
+
+                <span>
+                    Secure payment
+                </span>
+
+            </div>
+
+
+            <div>
+
+                <i class="fas fa-truck"></i>
+
+                <span>
+                    Reliable delivery
+                </span>
+
+            </div>
+
+
+            <div>
+
+                <i class="fas fa-heart"></i>
+
+                <span>
+                    Made with care
+                </span>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+</main>
+<!-- =========================================
+     ORDER CONFIRMATION
+========================================= -->
+
+<section
+    id="orderConfirmation"
+    class="order-confirmation">
+
+    <div class="confirmation-card">
+
+        <div class="confirmation-icon">
+
+            <i class="fas fa-check"></i>
+
+        </div>
+
+        <span class="confirmation-label">
+            ORDER PLACED
+        </span>
+
+        <h2>
+            Thank You for Shopping with Glamora
+        </h2>
+
+        <p>
+            Your order has been received successfully.
+            We've sent your order details to your email.
+        </p>
+
+        <div class="order-number">
+
+            <span>
+                Order Number
+            </span>
+
+            <strong id="orderNumber">
+                GLM-000000
+            </strong>
+
+        </div>
+
+        <div class="confirmation-actions">
+
+            <a
+                href="shop.html"
+                class="continue-shopping">
+
+                Continue Shopping
+
+                <i class="fas fa-arrow-right"></i>
+
+            </a>
+
+            <a
+                href="index.html"
+                class="home-button">
+
+                Back to Home
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     NEWSLETTER
+========================================= -->
+
+<section class="newsletter">
+
+    <h2>
+        Stay Beautiful with Glamora
+    </h2>
+
+    <p>
+        Join our community for skincare tips,
+        beauty inspiration and exclusive offers.
+    </p>
+
+
+    <form id="newsletterForm">
+
+        <input
+            type="email"
+            placeholder="Enter your email address"
+            required
+        >
+
+        <button type="submit">
+            Subscribe
+        </button>
+
+    </form>
+
+
+    <p
+        id="newsletterMessage"
+        class="newsletter-message">
+    </p>
+
+</section>
+
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer>
+
+    <div class="footer-container">
+
+
+        <!-- BRAND -->
+
+        <div class="footer-column">
+
+            <h3>
+                GLAMORA
+            </h3>
+
+            <p>
+                Luxury skincare designed to help you
+                discover healthy, radiant skin and feel
+                confident in your own routine.
+            </p>
+
+
+            <div class="social-icons">
+
+                <a
+                    href="#"
+                    aria-label="Instagram">
+
+                    <i class="fab fa-instagram"></i>
+
+                </a>
+
+                <a
+                    href="#"
+                    aria-label="Facebook">
+
+                    <i class="fab fa-facebook-f"></i>
+
+                </a>
+
+                <a
+                    href="#"
+                    aria-label="TikTok">
+
+                    <i class="fab fa-tiktok"></i>
+
+                </a>
+
+                <a
+                    href="#"
+                    aria-label="Pinterest">
+
+                    <i class="fab fa-pinterest"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- SHOP -->
+
+        <div class="footer-column">
+
+            <h3>
+                Shop
+            </h3>
+
+            <ul>
+
+                <li>
+                    <a href="shop.html">
+                        All Products
+                    </a>
+                </li>
+
+                <li>
+                    <a href="shop.html">
+                        Best Sellers
+                    </a>
+                </li>
+
+                <li>
+                    <a href="shop.html">
+                        New Arrivals
+                    </a>
+                </li>
+
+                <li>
+                    <a href="shop.html">
+                        Serums
+                    </a>
+                </li>
+
+                <li>
+                    <a href="shop.html">
+                        Moisturizers
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+
+        <!-- CUSTOMER CARE -->
+
+        <div class="footer-column">
+
+            <h3>
+                Customer Care
+            </h3>
+
+            <ul>
+
+                <li>
+                    <a href="contact.html">
+                        Contact Us
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Shipping & Delivery
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Returns
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html">
+                        FAQs
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Privacy Policy
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+
+        <!-- CONTACT -->
+
+        <div class="footer-column">
+
+            <h3>
+                Contact
+            </h3>
+
+            <p>
+
+                <i class="fas fa-envelope"></i>
+
+                hello@glamora.com
+
+            </p>
+
+            <p>
+
+                <i class="fas fa-phone"></i>
+
+                +1 234 567 890
+
+            </p>
+
+            <p>
+
+                <i class="fas fa-location-dot"></i>
+
+                123 Beauty Avenue
+
+            </p>
+
+            <p>
+
+                <i class="fas fa-clock"></i>
+
+                Mon - Fri: 9AM - 6PM
+
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================
+         FOOTER BOTTOM
+    ====================================== -->
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 Glamora. All Rights Reserved.
+        </p>
+
+
+        <div class="payment-icons">
+
+            <i class="fab fa-cc-visa"></i>
+
+            <i class="fab fa-cc-mastercard"></i>
+
+            <i class="fab fa-cc-amex"></i>
+
+            <i class="fab fa-cc-paypal"></i>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =========================================
+     JAVASCRIPT
+========================================= -->
+
+<script src="checkout.js"></script>
+
+</body>
+
+</html>
