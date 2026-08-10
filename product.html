@@ -1,0 +1,1365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Product | Glamora</title>
+
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet"
+          href="product.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     TOP BAR
+========================================= -->
+
+<div class="top-bar">
+
+    ✨ Free Shipping on Orders Over $50 | 10% OFF Your First Order
+
+</div>
+
+
+
+<!-- =========================================
+     HEADER
+========================================= -->
+
+<header>
+
+    <div class="logo">
+
+        <a href="index.html">
+            GLAMORA
+        </a>
+
+    </div>
+
+
+    <div class="search-bar">
+
+        <input
+            type="text"
+            id="productSearch"
+            placeholder="Search products..."
+        >
+
+        <button
+            type="button"
+            id="searchButton">
+
+            <i class="fas fa-search"></i>
+
+        </button>
+
+    </div>
+
+
+    <div class="header-icons">
+
+        <a href="#"
+           aria-label="Account">
+
+            <i class="far fa-user"></i>
+
+        </a>
+
+        <a href="#"
+           aria-label="Wishlist">
+
+            <i class="far fa-heart"></i>
+
+        </a>
+
+        <a href="cart.html"
+           aria-label="Shopping cart">
+
+            <i class="fas fa-shopping-cart"></i>
+
+            <span
+                id="cartCount"
+                class="cart-count">
+
+                0
+
+            </span>
+
+        </a>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================================
+     NAVIGATION
+========================================= -->
+
+<nav>
+
+    <ul>
+
+        <li>
+            <a href="index.html">
+                Home
+            </a>
+        </li>
+
+        <li>
+            <a href="shop.html">
+                Shop
+            </a>
+        </li>
+
+        <li>
+            <a href="about.html">
+                About
+            </a>
+        </li>
+
+        <li>
+            <a href="contact.html">
+                Contact
+            </a>
+        </li>
+
+        <li>
+            <a href="blog.html">
+                Blog
+            </a>
+        </li>
+
+    </ul>
+
+</nav>
+
+
+
+<!-- =========================================
+     BREADCRUMB
+========================================= -->
+
+<div class="breadcrumb">
+
+    <a href="index.html">
+        Home
+    </a>
+
+    <span>
+        /
+    </span>
+
+    <a href="shop.html">
+        Shop
+    </a>
+
+    <span>
+        /
+    </span>
+
+    <span id="breadcrumbProduct">
+        Product
+    </span>
+
+</div>
+
+
+
+<!-- =========================================
+     PRODUCT DETAILS
+========================================= -->
+
+<main>
+
+<section class="product-section">
+
+
+    <!-- =====================================
+         PRODUCT IMAGE
+    ====================================== -->
+
+    <div class="product-gallery">
+
+        <div class="thumbnail-container">
+
+            <button
+                class="thumbnail active"
+                data-image="product-main.png">
+
+                <img
+                    src="product-main.png"
+                    alt="Product image">
+
+            </button>
+
+            <button
+                class="thumbnail"
+                data-image="product-side.png">
+
+                <img
+                    src="product-side.png"
+                    alt="Product side view">
+
+            </button>
+
+            <button
+                class="thumbnail"
+                data-image="product-detail.png">
+
+                <img
+                    src="product-detail.png"
+                    alt="Product detail">
+
+            </button>
+
+            <button
+                class="thumbnail"
+                data-image="product-texture.png">
+
+                <img
+                    src="product-texture.png"
+                    alt="Product texture">
+
+            </button>
+
+        </div>
+
+
+        <div class="main-product-image">
+
+            <span class="product-badge">
+                BEST SELLER
+            </span>
+
+            <button
+                class="image-wishlist"
+                id="imageWishlist"
+                aria-label="Add to wishlist">
+
+                <i class="far fa-heart"></i>
+
+            </button>
+
+            <img
+                id="mainProductImage"
+                src="product-main.png"
+                alt="Product">
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================
+         PRODUCT INFORMATION
+    ====================================== -->
+
+    <div class="product-info">
+
+        <span
+            class="product-category"
+            id="productCategory">
+
+            SKINCARE
+
+        </span>
+
+
+        <h1 id="productName">
+            Vitamin C Glow Serum
+        </h1>
+
+
+        <!-- RATING -->
+
+        <div class="product-rating">
+
+            <div class="stars">
+
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+
+            </div>
+
+            <span>
+                4.8
+            </span>
+
+            <a href="#reviews">
+                128 Reviews
+            </a>
+
+        </div>
+
+
+        <!-- PRICE -->
+
+        <div class="product-price">
+
+            <span
+                id="productPrice"
+                class="current-price">
+
+                $24.99
+
+            </span>
+
+            <span
+                class="old-price">
+
+                $32.99
+
+            </span>
+
+            <span class="discount">
+                24% OFF
+            </span>
+
+        </div>
+
+
+        <!-- DESCRIPTION -->
+
+        <p
+            class="product-description"
+            id="productDescription">
+
+            A brightening Vitamin C serum designed to
+            support a more radiant, even-looking complexion
+            while helping your skin feel smooth and hydrated.
+
+        </p>
+
+
+        <!-- KEY BENEFITS -->
+
+        <div class="product-benefits">
+
+            <h3>
+                Why You'll Love It
+            </h3>
+
+            <ul>
+
+                <li>
+
+                    <i class="fas fa-check"></i>
+
+                    Brightens the appearance of dull skin
+
+                </li>
+
+                <li>
+
+                    <i class="fas fa-check"></i>
+
+                    Helps support an even-looking skin tone
+
+                </li>
+
+                <li>
+
+                    <i class="fas fa-check"></i>
+
+                    Leaves skin feeling soft and hydrated
+
+                </li>
+
+                <li>
+
+                    <i class="fas fa-check"></i>
+
+                    Suitable for everyday skincare routines
+
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- QUANTITY -->
+
+        <div class="quantity-section">
+
+            <span>
+                Quantity
+            </span>
+
+            <div class="quantity-control">
+
+                <button
+                    type="button"
+                    id="decreaseQuantity">
+
+                    −
+
+                </button>
+
+                <span id="quantity">
+                    1
+                </span>
+
+                <button
+                    type="button"
+                    id="increaseQuantity">
+
+                    +
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- ADD TO CART -->
+
+        <div class="product-actions">
+
+            <button
+                class="add-cart-btn"
+                id="addToCart">
+
+                <i class="fas fa-shopping-bag"></i>
+
+                Add to Cart
+
+            </button>
+
+
+            <button
+                class="wishlist-btn"
+                id="addWishlist">
+
+                <i class="far fa-heart"></i>
+
+                Wishlist
+
+            </button>
+
+        </div>
+
+
+        <!-- PRODUCT INFORMATION -->
+
+        <div class="product-meta">
+
+            <div>
+
+                <i class="fas fa-truck"></i>
+
+                <span>
+                    Free shipping on orders over $50
+                </span>
+
+            </div>
+
+            <div>
+
+                <i class="fas fa-rotate-left"></i>
+
+                <span>
+                    Easy returns
+                </span>
+
+            </div>
+
+            <div>
+
+                <i class="fas fa-shield-halved"></i>
+
+                <span>
+                    Secure checkout
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     PRODUCT INFORMATION TABS
+========================================= -->
+
+<section class="product-details">
+
+    <div class="detail-tabs">
+
+        <button
+            class="detail-tab active"
+            data-tab="description">
+
+            Description
+
+        </button>
+
+        <button
+            class="detail-tab"
+            data-tab="ingredients">
+
+            Ingredients
+
+        </button>
+
+        <button
+            class="detail-tab"
+            data-tab="how-to-use">
+
+            How To Use
+
+        </button>
+
+    </div>
+
+
+    <!-- DESCRIPTION -->
+
+    <div
+        class="detail-content active"
+        id="description">
+
+        <h2>
+            About This Product
+        </h2>
+
+        <p>
+            Give your skin a fresh, radiant-looking glow
+            with our Vitamin C Glow Serum. This lightweight
+            formula is designed to fit easily into your
+            everyday skincare routine.
+        </p>
+
+        <p>
+            Use it consistently as part of your morning
+            routine and follow with moisturizer and
+            sunscreen.
+        </p>
+
+    </div>
+
+
+    <!-- INGREDIENTS -->
+
+    <div
+        class="detail-content"
+        id="ingredients">
+
+        <h2>
+            Key Ingredients
+        </h2>
+
+        <div class="ingredient-list">
+
+            <div>
+
+                <strong>
+                    Vitamin C
+                </strong>
+
+                <span>
+                    Helps brighten the appearance of skin.
+                </span>
+
+            </div>
+
+            <div>
+
+                <strong>
+                    Hyaluronic Acid
+                </strong>
+
+                <span>
+                    Helps maintain a hydrated skin feel.
+                </span>
+
+            </div>
+
+            <div>
+
+                <strong>
+                    Vitamin E
+                </strong>
+
+                <span>
+                    Helps condition and soften the skin.
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- HOW TO USE -->
+
+    <div
+        class="detail-content"
+        id="how-to-use">
+
+        <h2>
+            How To Use
+        </h2>
+
+        <ol>
+
+            <li>
+                Cleanse your face and pat dry.
+            </li>
+
+            <li>
+                Apply a few drops of serum to your face.
+            </li>
+
+            <li>
+                Gently massage until absorbed.
+            </li>
+
+            <li>
+                Follow with moisturizer.
+            </li>
+
+            <li>
+                During the day, finish with sunscreen.
+            </li>
+
+        </ol>
+
+    </div>
+
+</section>
+<!-- =========================================
+     REVIEWS
+========================================= -->
+
+<section class="reviews-section" id="reviews">
+
+    <div class="section-heading">
+
+        <span class="section-label">
+            CUSTOMER REVIEWS
+        </span>
+
+        <h2>
+            What Our Customers Say
+        </h2>
+
+    </div>
+
+
+    <div class="reviews-summary">
+
+        <div class="overall-rating">
+
+            <strong>
+                4.8
+            </strong>
+
+            <div class="stars">
+
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+
+            </div>
+
+            <span>
+                Based on 128 reviews
+            </span>
+
+        </div>
+
+
+        <div class="rating-bars">
+
+            <div class="rating-row">
+
+                <span>5</span>
+
+                <i class="fas fa-star"></i>
+
+                <div class="rating-bar">
+
+                    <span style="width: 88%;"></span>
+
+                </div>
+
+                <span>88%</span>
+
+            </div>
+
+
+            <div class="rating-row">
+
+                <span>4</span>
+
+                <i class="fas fa-star"></i>
+
+                <div class="rating-bar">
+
+                    <span style="width: 8%;"></span>
+
+                </div>
+
+                <span>8%</span>
+
+            </div>
+
+
+            <div class="rating-row">
+
+                <span>3</span>
+
+                <i class="fas fa-star"></i>
+
+                <div class="rating-bar">
+
+                    <span style="width: 3%;"></span>
+
+                </div>
+
+                <span>3%</span>
+
+            </div>
+
+
+            <div class="rating-row">
+
+                <span>2</span>
+
+                <i class="fas fa-star"></i>
+
+                <div class="rating-bar">
+
+                    <span style="width: 1%;"></span>
+
+                </div>
+
+                <span>1%</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- REVIEW CARDS -->
+
+    <div class="review-grid">
+
+
+        <article class="review-card">
+
+            <div class="review-stars">
+
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+
+            </div>
+
+            <p>
+                "My skin looks so much brighter since I
+                started using this serum. It feels lightweight
+                and absorbs really quickly."
+            </p>
+
+            <strong>
+                Sarah M.
+            </strong>
+
+            <span>
+                Verified Customer
+            </span>
+
+        </article>
+
+
+        <article class="review-card">
+
+            <div class="review-stars">
+
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+
+            </div>
+
+            <p>
+                "I love how simple this product is to add
+                to my morning routine. My skin feels soft
+                and hydrated."
+            </p>
+
+            <strong>
+                Amanda K.
+            </strong>
+
+            <span>
+                Verified Customer
+            </span>
+
+        </article>
+
+
+        <article class="review-card">
+
+            <div class="review-stars">
+
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+
+            </div>
+
+            <p>
+                "Beautiful packaging and a lovely texture.
+                Definitely one of my favorite Glamora
+                products."
+            </p>
+
+            <strong>
+                Emily R.
+            </strong>
+
+            <span>
+                Verified Customer
+            </span>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     RELATED PRODUCTS
+========================================= -->
+
+<section class="related-section">
+
+    <div class="section-heading">
+
+        <span class="section-label">
+            YOU MAY ALSO LIKE
+        </span>
+
+        <h2>
+            Complete Your Routine
+        </h2>
+
+    </div>
+
+
+    <div class="related-grid">
+
+
+        <!-- PRODUCT -->
+
+        <article class="related-card">
+
+            <div class="related-image">
+
+                <span class="related-badge">
+                    NEW
+                </span>
+
+                <img
+                    src="hydrating-cleanser.png"
+                    alt="Hydrating Cleanser"
+                >
+
+                <button
+                    class="related-wishlist"
+                    aria-label="Add to wishlist">
+
+                    <i class="far fa-heart"></i>
+
+                </button>
+
+            </div>
+
+
+            <div class="related-info">
+
+                <span>
+                    CLEANSER
+                </span>
+
+                <h3>
+                    Hydrating Cleanser
+                </h3>
+
+                <div class="related-rating">
+
+                    <i class="fas fa-star"></i>
+
+                    <span>
+                        4.7
+                    </span>
+
+                </div>
+
+                <strong>
+                    $18.99
+                </strong>
+
+            </div>
+
+        </article>
+
+
+        <!-- PRODUCT -->
+
+        <article class="related-card">
+
+            <div class="related-image">
+
+                <img
+                    src="glow-moisturizer.png"
+                    alt="Glow Moisturizer"
+                >
+
+                <button
+                    class="related-wishlist"
+                    aria-label="Add to wishlist">
+
+                    <i class="far fa-heart"></i>
+
+                </button>
+
+            </div>
+
+
+            <div class="related-info">
+
+                <span>
+                    MOISTURIZER
+                </span>
+
+                <h3>
+                    Glow Moisturizer
+                </h3>
+
+                <div class="related-rating">
+
+                    <i class="fas fa-star"></i>
+
+                    <span>
+                        4.9
+                    </span>
+
+                </div>
+
+                <strong>
+                    $22.99
+                </strong>
+
+            </div>
+
+        </article>
+
+
+        <!-- PRODUCT -->
+
+        <article class="related-card">
+
+            <div class="related-image">
+
+                <span class="related-badge">
+                    BEST SELLER
+                </span>
+
+                <img
+                    src="spf-50-sunscreen.png"
+                    alt="SPF 50 Sunscreen"
+                >
+
+                <button
+                    class="related-wishlist"
+                    aria-label="Add to wishlist">
+
+                    <i class="far fa-heart"></i>
+
+                </button>
+
+            </div>
+
+
+            <div class="related-info">
+
+                <span>
+                    SUNSCREEN
+                </span>
+
+                <h3>
+                    SPF 50 Sunscreen
+                </h3>
+
+                <div class="related-rating">
+
+                    <i class="fas fa-star"></i>
+
+                    <span>
+                        4.8
+                    </span>
+
+                </div>
+
+                <strong>
+                    $19.99
+                </strong>
+
+            </div>
+
+        </article>
+
+
+        <!-- PRODUCT -->
+
+        <article class="related-card">
+
+            <div class="related-image">
+
+                <img
+                    src="niacinamide-serum.png"
+                    alt="Niacinamide Serum"
+                >
+
+                <button
+                    class="related-wishlist"
+                    aria-label="Add to wishlist">
+
+                    <i class="far fa-heart"></i>
+
+                </button>
+
+            </div>
+
+
+            <div class="related-info">
+
+                <span>
+                    SERUM
+                </span>
+
+                <h3>
+                    Niacinamide Serum
+                </h3>
+
+                <div class="related-rating">
+
+                    <i class="fas fa-star"></i>
+
+                    <span>
+                        4.8
+                    </span>
+
+                </div>
+
+                <strong>
+                    $21.99
+                </strong>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     NEWSLETTER
+========================================= -->
+
+<section class="newsletter">
+
+    <h2>
+        Join the Glamora Community
+    </h2>
+
+    <p>
+        Get skincare tips, new product launches
+        and exclusive offers straight to your inbox.
+    </p>
+
+
+    <form id="newsletterForm">
+
+        <input
+            type="email"
+            placeholder="Enter your email address"
+            required
+        >
+
+        <button type="submit">
+            Subscribe
+        </button>
+
+    </form>
+
+
+    <p
+        id="newsletterMessage"
+        class="newsletter-message">
+    </p>
+
+</section>
+
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer>
+
+    <div class="footer-container">
+
+
+        <!-- BRAND -->
+
+        <div class="footer-column">
+
+            <h3>
+                GLAMORA
+            </h3>
+
+            <p>
+                Luxury skincare designed to help you
+                discover healthy, radiant skin and feel
+                confident in your own routine.
+            </p>
+
+
+            <div class="social-icons">
+
+                <a href="#">
+                    <i class="fab fa-instagram"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fab fa-pinterest"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- SHOP -->
+
+        <div class="footer-column">
+
+            <h3>
+                Shop
+            </h3>
+
+            <ul>
+
+                <li>
+                    <a href="shop.html">
+                        All Products
+                    </a>
+                </li>
+
+                <li>
+                    <a href="shop.html">
+                        Best Sellers
+                    </a>
+                </li>
+
+                <li>
+                    <a href="shop.html">
+                        New Arrivals
+                    </a>
+                </li>
+
+                <li>
+                    <a href="shop.html">
+                        Serums
+                    </a>
+                </li>
+
+                <li>
+                    <a href="shop.html">
+                        Moisturizers
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- CUSTOMER CARE -->
+
+        <div class="footer-column">
+
+            <h3>
+                Customer Care
+            </h3>
+
+            <ul>
+
+                <li>
+                    <a href="contact.html">
+                        Contact Us
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Shipping & Delivery
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Returns
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html">
+                        FAQs
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Privacy Policy
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- CONTACT -->
+
+        <div class="footer-column">
+
+            <h3>
+                Contact
+            </h3>
+
+            <p>
+
+                <i class="fas fa-envelope"></i>
+
+                hello@glamora.com
+
+            </p>
+
+            <p>
+
+                <i class="fas fa-phone"></i>
+
+                +1 234 567 890
+
+            </p>
+
+            <p>
+
+                <i class="fas fa-location-dot"></i>
+
+                123 Beauty Avenue
+
+            </p>
+
+            <p>
+
+                <i class="fas fa-clock"></i>
+
+                Mon - Fri: 9AM - 6PM
+
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- FOOTER BOTTOM -->
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 Glamora. All Rights Reserved.
+        </p>
+
+        <div class="payment-icons">
+
+            <i class="fab fa-cc-visa"></i>
+            <i class="fab fa-cc-mastercard"></i>
+            <i class="fab fa-cc-amex"></i>
+            <i class="fab fa-cc-paypal"></i>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =========================================
+     JAVASCRIPT
+========================================= -->
+
+<script src="product.js"></script>
+
+</body>
+
+</html>
