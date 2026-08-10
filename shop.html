@@ -3,45 +3,97 @@
 
 <head>
 
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-<title>Shop | Glamora</title>
+    <title>Shop | Glamora</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
 
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Google Fonts -->
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
 
-<link rel="stylesheet" href="shop.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- Font Awesome -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+
+    <!-- Shop CSS -->
+
+    <link
+        rel="stylesheet"
+        href="shop.css"
+    >
 
 </head>
 
+
 <body>
+
+
+<!-- =========================================
+     TOP BAR
+========================================= -->
 
 <div class="top-bar">
 
-    <p>✨ Free Shipping on Orders Over $50 | 10% OFF First Purchase</p>
+    <p>
+        ✨ Free Shipping on Orders Over $50 |
+        10% OFF First Purchase
+    </p>
 
 </div>
 
+
+
+<!-- =========================================
+     HEADER
+========================================= -->
+
 <header>
+
+
+    <!-- LOGO -->
 
     <div class="logo">
 
-        <a href="index.html">GLAMORA</a>
+        <a href="index.html">
+            GLAMORA
+        </a>
 
     </div>
 
+
+    <!-- SEARCH -->
+
     <div class="search-bar">
 
-        <input type="text" placeholder="Search skincare...">
+        <input
+            type="text"
+            placeholder="Search skincare..."
+        >
 
-        <button>
+        <button type="button">
 
             <i class="fas fa-search"></i>
 
@@ -49,534 +101,1085 @@
 
     </div>
 
+
+    <!-- HEADER ICONS -->
+
     <div class="header-icons">
 
-    <a href="#">
-        <i class="far fa-user"></i>
-    </a>
 
-    <a href="#">
-        <i class="far fa-heart"></i>
-    </a>
+        <!-- ACCOUNT -->
 
-    <a href="./cart.html"
-   class="cart-link"
-   aria-label="Shopping cart">
+        <a
+            href="#"
+            aria-label="Account"
+        >
 
-    <i class="fas fa-shopping-cart"></i>
+            <i class="far fa-user"></i>
 
-    <span id="cartCount"
-          class="cart-count">
-        0
-    </span>
+        </a>
 
-    </a>
+
+        <!-- WISHLIST -->
+
+        <a
+            href="#"
+            aria-label="Wishlist"
+        >
+
+            <i class="far fa-heart"></i>
+
+        </a>
+
+
+        <!-- CART -->
+
+        <a
+            href="cart.html"
+            aria-label="Shopping cart"
+        >
+
+            <i class="fas fa-shopping-cart"></i>
+
+            <span
+                id="cartCount"
+                class="cart-count"
+            >
+                0
+            </span>
+
+        </a>
+
 
     </div>
 
 </header>
 
+
+
+<!-- =========================================
+     NAVIGATION
+========================================= -->
+
 <nav>
 
-<ul>
+    <ul>
 
-<li><a href="index.html">Home</a></li>
+        <li>
+            <a href="index.html">
+                Home
+            </a>
+        </li>
 
-<li><a class="active" href="shop.html">Shop</a></li>
 
-<li><a href="about.html">About</a></li>
+        <li>
+            <a
+                class="active"
+                href="shop.html"
+            >
+                Shop
+            </a>
+        </li>
 
-<li><a href="contact.html">Contact</a></li>
 
-<li><a href="blog.html">Blog</a></li>
+        <li>
+            <a href="about.html">
+                About
+            </a>
+        </li>
 
-</ul>
+
+        <li>
+            <a href="contact.html">
+                Contact
+            </a>
+        </li>
+
+
+        <li>
+            <a href="blog.html">
+                Blog
+            </a>
+        </li>
+
+    </ul>
 
 </nav>
 
+
+
+<!-- =========================================
+     SHOP BANNER
+========================================= -->
+
 <section class="shop-banner">
 
-<h1>Shop Skincare</h1>
+    <h1>
+        Shop Skincare
+    </h1>
 
-<p>Premium skincare carefully selected for healthy glowing skin.</p>
+    <p>
+        Premium skincare carefully selected
+        for healthy glowing skin.
+    </p>
 
 </section>
+
+
+
+<!-- =========================================
+     BREADCRUMB
+========================================= -->
 
 <section class="breadcrumb">
 
-<a href="index.html">Home</a>
+    <a href="index.html">
+        Home
+    </a>
 
-<span>/</span>
+    <span>/</span>
 
-<span>Shop</span>
+    <span>
+        Shop
+    </span>
 
 </section>
 
+
+
+<!-- =========================================
+     SHOP SECTION
+========================================= -->
+
 <section class="shop-container">
 
-<aside class="sidebar">
 
-<div class="filter-box">
+    <!-- =====================================
+         SIDEBAR
+    ====================================== -->
 
-<h3>Categories</h3>
+    <aside class="sidebar">
 
-<ul>
 
-<li><input type="checkbox"> Cleanser</li>
+        <!-- CATEGORIES -->
 
-<li><input type="checkbox"> Serum</li>
+        <div class="filter-box">
 
-<li><input type="checkbox"> Moisturizer</li>
+            <h3>
+                Categories
+            </h3>
 
-<li><input type="checkbox"> Sunscreen</li>
+            <ul>
 
-<li><input type="checkbox"> Face Mask</li>
+                <li>
+                    <input type="checkbox">
+                    Cleanser
+                </li>
 
-</ul>
+                <li>
+                    <input type="checkbox">
+                    Serum
+                </li>
 
-</div>
+                <li>
+                    <input type="checkbox">
+                    Moisturizer
+                </li>
 
-<div class="filter-box">
+                <li>
+                    <input type="checkbox">
+                    Sunscreen
+                </li>
 
-<h3>Skin Type</h3>
+                <li>
+                    <input type="checkbox">
+                    Face Mask
+                </li>
 
-<ul>
-
-<li><input type="checkbox"> Dry Skin</li>
-
-<li><input type="checkbox"> Oily Skin</li>
-
-<li><input type="checkbox"> Combination</li>
-
-<li><input type="checkbox"> Sensitive</li>
-
-</ul>
-
-</div>
-
-<div class="filter-box">
-
-<h3>Price</h3>
-
-<input type="range" min="10" max="150">
-
-<p>$10 - $150</p>
-
-</div>
-
-</aside>
-
-<div class="products-section">
-
-<div class="shop-top">
-
-<h2>All Products</h2>
-
-<select>
-
-<option>Sort by Featured</option>
-
-<option>Price Low to High</option>
-
-<option>Price High to Low</option>
-
-<option>Newest</option>
-
-<option>Best Selling</option>
-
-</select>
-
-</div>
-
-<div class="product-grid">
-
-<div class="product-card">
-
-<span class="badge">Best Seller</span>
-
-<img src="vitamin c serum.png" alt="Vitamin C Serum">
-
-<h3>Vitamin C Serum</h3>
-
-<div class="stars">
-
-★★★★★
-
-</div>
-
-<p class="price">$34.99</p>
-
-<div class="card-buttons">
-
-<button>Add to Cart</button>
-
-<i class="far fa-heart"></i>
-
-</div>
-
-</div>
-
-<div class="product-card">
-
-<img src="hydrating cleanser.png" alt="Hydrating Cleanser">
-
-<h3>Hydrating Cleanser</h3>
-
-<div class="stars">
-
-★★★★★
-
-</div>
-
-<p class="price">$24.99</p>
-
-<div class="card-buttons">
-
-<button>Add to Cart</button>
-
-<i class="far fa-heart"></i>
-
-</div>
-
-</div>
-
-<div class="product-card">
-
-<img src="glow moisturizer.png" alt="Glow Moisturizer">
-
-<h3>Glow Moisturizer</h3>
-
-<div class="stars">
-
-★★★★★
-
-</div>
-
-<p class="price">$29.99</p>
-
-<div class="card-buttons">
-
-<button>Add to Cart</button>
-
-<i class="far fa-heart"></i>
-
-</div>
-
-</div>
-
-<div class="product-card">
-
-<img src="spf 50 sunscreen.png" alt="SPF 50 Sunscreen">
-
-<h3>SPF 50 Sunscreen</h3>
-
-<div class="stars">
-
-★★★★★
-
-</div>
-
-<p class="price">$27.99</p>
-
-<div class="card-buttons">
-
-<button>Add to Cart</button>
-
-<i class="far fa-heart"></i>
-
-</div>
-
-</div>
-        <div class="product-card">
-
-            <span class="badge sale">Sale</span>
-
-            <img src="night repair cfream.png" alt="Night Repair Cream">
-
-            <h3>Night Repair Cream</h3>
-
-            <div class="stars">
-                ★★★★★
-            </div>
-
-            <p class="price">$39.99</p>
-
-            <div class="card-buttons">
-
-                <button>Add to Cart</button>
-
-                <i class="far fa-heart"></i>
-
-            </div>
+            </ul>
 
         </div>
 
-        <div class="product-card">
 
-            <img src="niacinamide serum.png" alt="Niacinamide Serum">
 
-            <h3>Niacinamide Serum</h3>
+        <!-- SKIN TYPE -->
 
-            <div class="stars">
-                ★★★★★
-            </div>
+        <div class="filter-box">
 
-            <p class="price">$32.99</p>
+            <h3>
+                Skin Type
+            </h3>
 
-            <div class="card-buttons">
+            <ul>
 
-                <button>Add to Cart</button>
+                <li>
+                    <input type="checkbox">
+                    Dry Skin
+                </li>
 
-                <i class="far fa-heart"></i>
+                <li>
+                    <input type="checkbox">
+                    Oily Skin
+                </li>
 
-            </div>
+                <li>
+                    <input type="checkbox">
+                    Combination
+                </li>
 
-        </div>
+                <li>
+                    <input type="checkbox">
+                    Sensitive
+                </li>
 
-        <div class="product-card">
-
-            <img src="clay mask.png" alt="Clay Face Mask">
-
-            <h3>Clay Face Mask</h3>
-
-            <div class="stars">
-                ★★★★★
-            </div>
-
-            <p class="price">$22.99</p>
-
-            <div class="card-buttons">
-
-                <button>Add to Cart</button>
-
-                <i class="far fa-heart"></i>
-
-            </div>
+            </ul>
 
         </div>
 
-        <div class="product-card">
 
-            <span class="badge new">New</span>
 
-            <img src="hydrating toner.png" alt="Hydrating Toner">
+        <!-- PRICE -->
 
-            <h3>Hydrating Toner</h3>
+        <div class="filter-box">
 
-            <div class="stars">
-                ★★★★★
-            </div>
+            <h3>
+                Price
+            </h3>
 
-            <p class="price">$25.99</p>
+            <input
+                type="range"
+                min="10"
+                max="150"
+            >
 
-            <div class="card-buttons">
-
-                <button>Add to Cart</button>
-
-                <i class="far fa-heart"></i>
-
-            </div>
+            <p>
+                $10 - $150
+            </p>
 
         </div>
 
-        <div class="product-card">
 
-            <img src="rose water  mist.png" alt="Rose Water Mist">
+    </aside>
 
-            <h3>Rose Water Mist</h3>
 
-            <div class="stars">
-                ★★★★★
-            </div>
 
-            <p class="price">$19.99</p>
+    <!-- =====================================
+         PRODUCTS
+    ====================================== -->
 
-            <div class="card-buttons">
+    <div class="products-section">
 
-                <button>Add to Cart</button>
 
-                <i class="far fa-heart"></i>
+        <!-- SHOP TOP -->
 
-            </div>
+        <div class="shop-top">
 
-        </div>
+            <h2>
+                All Products
+            </h2>
 
-        <div class="product-card">
 
-            <img src="brightening eye cream.png" alt="Eye Cream">
+            <select>
 
-            <h3>Brightening Eye Cream</h3>
+                <option>
+                    Sort by Featured
+                </option>
 
-            <div class="stars">
-                ★★★★★
-            </div>
+                <option>
+                    Price Low to High
+                </option>
 
-            <p class="price">$29.99</p>
+                <option>
+                    Price High to Low
+                </option>
 
-            <div class="card-buttons">
+                <option>
+                    Newest
+                </option>
 
-                <button>Add to Cart</button>
+                <option>
+                    Best Selling
+                </option>
 
-                <i class="far fa-heart"></i>
-
-            </div>
-
-        </div>
-
-        <div class="product-card">
-
-            <img src="lip balm.png" alt="Lip Balm">
-
-            <h3>Hydrating Lip Balm</h3>
-
-            <div class="stars">
-                ★★★★★
-            </div>
-
-            <p class="price">$14.99</p>
-
-            <div class="card-buttons">
-
-                <button>Add to Cart</button>
-
-                <i class="far fa-heart"></i>
-
-            </div>
+            </select>
 
         </div>
 
-        <div class="product-card">
 
-            <span class="badge">Popular</span>
 
-            <img src="retinol.png" alt="Retinol Cream">
+        <!-- PRODUCT GRID -->
 
-            <h3>Retinol Renewal Cream</h3>
+        <div class="product-grid">
 
-            <div class="stars">
-                ★★★★★
+
+
+            <!-- =================================
+                 PRODUCT 1
+            ================================== -->
+
+            <div
+                class="product-card"
+                data-id="vitamin-c-serum"
+                data-name="Vitamin C Serum"
+                data-price="34.99"
+                data-image="vitamin c serum.png"
+            >
+
+                <span class="badge">
+                    Best Seller
+                </span>
+
+                <img
+                    src="vitamin c serum.png"
+                    alt="Vitamin C Serum"
+                >
+
+                <h3>
+                    Vitamin C Serum
+                </h3>
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+
+                <p class="price">
+                    $34.99
+                </p>
+
+                <div class="card-buttons">
+
+                    <button
+                        type="button"
+                        class="add-to-cart"
+                    >
+                        Add to Cart
+                    </button>
+
+                    <i class="far fa-heart"></i>
+
+                </div>
+
             </div>
 
-            <p class="price">$44.99</p>
 
-            <div class="card-buttons">
 
-                <button>Add to Cart</button>
+            <!-- =================================
+                 PRODUCT 2
+            ================================== -->
 
-                <i class="far fa-heart"></i>
+            <div
+                class="product-card"
+                data-id="hydrating-cleanser"
+                data-name="Hydrating Cleanser"
+                data-price="24.99"
+                data-image="hydrating cleanser.png"
+            >
+
+                <img
+                    src="hydrating cleanser.png"
+                    alt="Hydrating Cleanser"
+                >
+
+                <h3>
+                    Hydrating Cleanser
+                </h3>
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+
+                <p class="price">
+                    $24.99
+                </p>
+
+                <div class="card-buttons">
+
+                    <button
+                        type="button"
+                        class="add-to-cart"
+                    >
+                        Add to Cart
+                    </button>
+
+                    <i class="far fa-heart"></i>
+
+                </div>
 
             </div>
+
+
+
+            <!-- =================================
+                 PRODUCT 3
+            ================================== -->
+
+            <div
+                class="product-card"
+                data-id="glow-moisturizer"
+                data-name="Glow Moisturizer"
+                data-price="29.99"
+                data-image="glow moisturizer.png"
+            >
+
+                <img
+                    src="glow moisturizer.png"
+                    alt="Glow Moisturizer"
+                >
+
+                <h3>
+                    Glow Moisturizer
+                </h3>
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+
+                <p class="price">
+                    $29.99
+                </p>
+
+                <div class="card-buttons">
+
+                    <button
+                        type="button"
+                        class="add-to-cart"
+                    >
+                        Add to Cart
+                    </button>
+
+                    <i class="far fa-heart"></i>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================
+                 PRODUCT 4
+            ================================== -->
+
+            <div
+                class="product-card"
+                data-id="spf-50-sunscreen"
+                data-name="SPF 50 Sunscreen"
+                data-price="27.99"
+                data-image="spf 50 sunscreen.png"
+            >
+
+                <img
+                    src="spf 50 sunscreen.png"
+                    alt="SPF 50 Sunscreen"
+                >
+
+                <h3>
+                    SPF 50 Sunscreen
+                </h3>
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+
+                <p class="price">
+                    $27.99
+                </p>
+
+                <div class="card-buttons">
+
+                    <button
+                        type="button"
+                        class="add-to-cart"
+                    >
+                        Add to Cart
+                    </button>
+
+                    <i class="far fa-heart"></i>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================
+                 PRODUCT 5
+            ================================== -->
+
+            <div
+                class="product-card"
+                data-id="night-repair-cream"
+                data-name="Night Repair Cream"
+                data-price="39.99"
+                data-image="night repair cfream.png"
+            >
+
+                <span class="badge sale">
+                    Sale
+                </span>
+
+                <img
+                    src="night repair cfream.png"
+                    alt="Night Repair Cream"
+                >
+
+                <h3>
+                    Night Repair Cream
+                </h3>
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+
+                <p class="price">
+                    $39.99
+                </p>
+
+                <div class="card-buttons">
+
+                    <button
+                        type="button"
+                        class="add-to-cart"
+                    >
+                        Add to Cart
+                    </button>
+
+                    <i class="far fa-heart"></i>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================
+                 PRODUCT 6
+            ================================== -->
+
+            <div
+                class="product-card"
+                data-id="niacinamide-serum"
+                data-name="Niacinamide Serum"
+                data-price="32.99"
+                data-image="niacinamide serum.png"
+            >
+
+                <img
+                    src="niacinamide serum.png"
+                    alt="Niacinamide Serum"
+                >
+
+                <h3>
+                    Niacinamide Serum
+                </h3>
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+
+                <p class="price">
+                    $32.99
+                </p>
+
+                <div class="card-buttons">
+
+                    <button
+                        type="button"
+                        class="add-to-cart"
+                    >
+                        Add to Cart
+                    </button>
+
+                    <i class="far fa-heart"></i>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================
+                 PRODUCT 7
+            ================================== -->
+
+            <div
+                class="product-card"
+                data-id="clay-mask"
+                data-name="Clay Face Mask"
+                data-price="22.99"
+                data-image="clay mask.png"
+            >
+
+                <img
+                    src="clay mask.png"
+                    alt="Clay Face Mask"
+                >
+
+                <h3>
+                    Clay Face Mask
+                </h3>
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+
+                <p class="price">
+                    $22.99
+                </p>
+
+                <div class="card-buttons">
+
+                    <button
+                        type="button"
+                        class="add-to-cart"
+                    >
+                        Add to Cart
+                    </button>
+
+                    <i class="far fa-heart"></i>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================
+                 PRODUCT 8
+            ================================== -->
+
+            <div
+                class="product-card"
+                data-id="hydrating-toner"
+                data-name="Hydrating Toner"
+                data-price="25.99"
+                data-image="hydrating toner.png"
+            >
+
+                <span class="badge new">
+                    New
+                </span>
+
+                <img
+                    src="hydrating toner.png"
+                    alt="Hydrating Toner"
+                >
+
+                <h3>
+                    Hydrating Toner
+                </h3>
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+
+                <p class="price">
+                    $25.99
+                </p>
+
+                <div class="card-buttons">
+
+                    <button
+                        type="button"
+                        class="add-to-cart"
+                    >
+                        Add to Cart
+                    </button>
+
+                    <i class="far fa-heart"></i>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================
+                 PRODUCT 9
+            ================================== -->
+
+            <div
+                class="product-card"
+                data-id="rose-water-mist"
+                data-name="Rose Water Mist"
+                data-price="19.99"
+                data-image="rose water  mist.png"
+            >
+
+                <img
+                    src="rose water  mist.png"
+                    alt="Rose Water Mist"
+                >
+
+                <h3>
+                    Rose Water Mist
+                </h3>
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+
+                <p class="price">
+                    $19.99
+                </p>
+
+                <div class="card-buttons">
+
+                    <button
+                        type="button"
+                        class="add-to-cart"
+                    >
+                        Add to Cart
+                    </button>
+
+                    <i class="far fa-heart"></i>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================
+                 PRODUCT 10
+            ================================== -->
+
+            <div
+                class="product-card"
+                data-id="brightening-eye-cream"
+                data-name="Brightening Eye Cream"
+                data-price="29.99"
+                data-image="brightening eye cream.png"
+            >
+
+                <img
+                    src="brightening eye cream.png"
+                    alt="Brightening Eye Cream"
+                >
+
+                <h3>
+                    Brightening Eye Cream
+                </h3>
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+
+                <p class="price">
+                    $29.99
+                </p>
+
+                <div class="card-buttons">
+
+                    <button
+                        type="button"
+                        class="add-to-cart"
+                    >
+                        Add to Cart
+                    </button>
+
+                    <i class="far fa-heart"></i>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================
+                 PRODUCT 11
+            ================================== -->
+
+            <div
+                class="product-card"
+                data-id="hydrating-lip-balm"
+                data-name="Hydrating Lip Balm"
+                data-price="14.99"
+                data-image="lip balm.png"
+            >
+
+                <img
+                    src="lip balm.png"
+                    alt="Hydrating Lip Balm"
+                >
+
+                <h3>
+                    Hydrating Lip Balm
+                </h3>
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+
+                <p class="price">
+                    $14.99
+                </p>
+
+                <div class="card-buttons">
+
+                    <button
+                        type="button"
+                        class="add-to-cart"
+                    >
+                        Add to Cart
+                    </button>
+
+                    <i class="far fa-heart"></i>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================
+                 PRODUCT 12
+            ================================== -->
+
+            <div
+                class="product-card"
+                data-id="retinol-renewal-cream"
+                data-name="Retinol Renewal Cream"
+                data-price="44.99"
+                data-image="retinol.png"
+            >
+
+                <span class="badge">
+                    Popular
+                </span>
+
+                <img
+                    src="retinol.png"
+                    alt="Retinol Renewal Cream"
+                >
+
+                <h3>
+                    Retinol Renewal Cream
+                </h3>
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+
+                <p class="price">
+                    $44.99
+                </p>
+
+                <div class="card-buttons">
+
+                    <button
+                        type="button"
+                        class="add-to-cart"
+                    >
+                        Add to Cart
+                    </button>
+
+                    <i class="far fa-heart"></i>
+
+                </div>
+
+            </div>
+
 
         </div>
 
     </div>
 
-</div>
-
 </section>
+
+
+
+<!-- =========================================
+     NEWSLETTER
+========================================= -->
 
 <section class="newsletter">
 
-    <h2>Join the Glamora Community</h2>
+    <h2>
+        Join the Glamora Community
+    </h2>
 
-    <p>Get exclusive skincare tips and special discounts.</p>
+    <p>
+        Get exclusive skincare tips and special discounts.
+    </p>
 
     <form>
 
-        <input type="email" placeholder="Enter your email">
+        <input
+            type="email"
+            placeholder="Enter your email"
+        >
 
-        <button type="submit">Subscribe</button>
+        <button type="submit">
+            Subscribe
+        </button>
 
     </form>
 
 </section>
 
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
 <footer>
 
-<div class="footer-container">
+    <div class="footer-container">
 
-<div class="footer-column">
 
-<h3>GLAMORA</h3>
+        <!-- BRAND -->
 
-<p>
+        <div class="footer-column">
 
-Luxury skincare designed to help you achieve healthy,
-radiant skin with confidence.
+            <h3>
+                GLAMORA
+            </h3>
 
-</p>
+            <p>
+                Luxury skincare designed to help
+                you achieve healthy, radiant skin
+                with confidence.
+            </p>
 
-</div>
+        </div>
 
-<div class="footer-column">
 
-<h3>Quick Links</h3>
 
-<ul>
+        <!-- QUICK LINKS -->
 
-<li><a href="index.html">Home</a></li>
+        <div class="footer-column">
 
-<li><a href="shop.html">Shop</a></li>
+            <h3>
+                Quick Links
+            </h3>
 
-<li><a href="about.html">About</a></li>
+            <ul>
 
-<li><a href="contact.html">Contact</a></li>
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
 
-</ul>
+                <li>
+                    <a href="shop.html">
+                        Shop
+                    </a>
+                </li>
 
-</div>
+                <li>
+                    <a href="about.html">
+                        About
+                    </a>
+                </li>
 
-<div class="footer-column">
+                <li>
+                    <a href="contact.html">
+                        Contact
+                    </a>
+                </li>
 
-<h3>Customer Care</h3>
+            </ul>
 
-<ul>
+        </div>
 
-<li><a href="#">Shipping</a></li>
 
-<li><a href="#">Returns</a></li>
 
-<li><a href="#">FAQs</a></li>
+        <!-- CUSTOMER CARE -->
 
-<li><a href="#">Privacy Policy</a></li>
+        <div class="footer-column">
 
-</ul>
+            <h3>
+                Customer Care
+            </h3>
 
-</div>
+            <ul>
 
-<div class="footer-column">
+                <li>
+                    <a href="#">
+                        Shipping
+                    </a>
+                </li>
 
-<h3>Follow Us</h3>
+                <li>
+                    <a href="#">
+                        Returns
+                    </a>
+                </li>
 
-<div class="social-icons">
+                <li>
+                    <a href="#">
+                        FAQs
+                    </a>
+                </li>
 
-<a href="#"><i class="fab fa-facebook-f"></i></a>
+                <li>
+                    <a href="#">
+                        Privacy Policy
+                    </a>
+                </li>
 
-<a href="#"><i class="fab fa-instagram"></i></a>
+            </ul>
 
-<a href="#"><i class="fab fa-tiktok"></i></a>
+        </div>
 
-<a href="#"><i class="fab fa-youtube"></i></a>
 
-</div>
 
-</div>
+        <!-- SOCIAL -->
 
-</div>
+        <div class="footer-column">
 
-<div class="footer-bottom">
+            <h3>
+                Follow Us
+            </h3>
 
-<p>
+            <div class="social-icons">
 
-© 2026 Glamora. All Rights Reserved.
+                <a href="#">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
 
-</p>
+                <a href="#">
+                    <i class="fab fa-instagram"></i>
+                </a>
 
-</div>
+                <a href="#">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fab fa-youtube"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- FOOTER BOTTOM -->
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 Glamora. All Rights Reserved.
+        </p>
+
+    </div>
 
 </footer>
 
+
+
+<!-- =========================================
+     SHOP JAVASCRIPT
+========================================= -->
+
 <script src="shop.js"></script>
+
 
 </body>
 
