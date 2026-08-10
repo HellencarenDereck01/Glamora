@@ -13,84 +13,84 @@ const checkoutProducts = {
         name: "Vitamin C Glow Serum",
         category: "SERUM",
         price: 24.99,
-        image: "vitamin-c-serum.png"
+        image: "vitamin c serum.png"
     },
 
     "hydrating-cleanser": {
         name: "Hydrating Cleanser",
         category: "CLEANSER",
         price: 18.99,
-        image: "hydrating-cleanser.png"
+        image: "hydrating cleanser.png"
     },
 
     "glow-moisturizer": {
         name: "Glow Moisturizer",
         category: "MOISTURIZER",
         price: 22.99,
-        image: "glow-moisturizer.png"
+        image: "glow moisturizer.png"
     },
 
     "spf-50-sunscreen": {
         name: "SPF 50 Sunscreen",
         category: "SUNSCREEN",
         price: 19.99,
-        image: "spf-50-sunscreen.png"
+        image: "spf 50 sunscreen.png"
     },
 
     "night-repair-cream": {
         name: "Night Repair Cream",
         category: "MOISTURIZER",
         price: 26.99,
-        image: "night-repair-cream.png"
+        image: "night repair cfream.png"
     },
 
     "niacinamide-serum": {
         name: "Niacinamide Serum",
         category: "SERUM",
         price: 21.99,
-        image: "niacinamide-serum.png"
+        image: "niacinamide serum.png"
     },
 
     "clay-mask": {
         name: "Clay Mask",
         category: "FACE MASK",
         price: 17.99,
-        image: "clay-mask.png"
+        image: "clay mask.png"
     },
 
     "hydrating-toner": {
         name: "Hydrating Toner",
         category: "TONER",
         price: 16.99,
-        image: "hydrating-toner.png"
+        image: "hydrating toner.png"
     },
 
     "rose-water-mist": {
         name: "Rose Water Mist",
         category: "FACE MIST",
         price: 15.99,
-        image: "rose-water-mist.png"
+        image: "rose water mist.png"
     },
 
     "brightening-eye-cream": {
         name: "Brightening Eye Cream",
         category: "EYE CARE",
         price: 23.99,
-        image: "brightening-eye-cream.png"
+        image: "brightening eye cream.png"
     },
 
     "hydrating-lip-balm": {
         name: "Hydrating Lip Balm",
         category: "LIP CARE",
         price: 9.99,
-        image: "hydrating-lip-balm.png"
+        image: "lip balm.png"
     },
 
     "retinol-renewal-cream": {
         name: "Retinol Renewal Cream",
         category: "MOISTURIZER",
         price: 27.99,
-        image: "retinol-renewal-cream.png"
+        image: "retinol.png"
     }
 
 };
