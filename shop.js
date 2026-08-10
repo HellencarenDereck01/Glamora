@@ -1,271 +1,595 @@
-// =======================================
-// GLAMORA SHOP PAGE JAVASCRIPT
-// =======================================
+// =========================================
+// GLAMORA SHOP JAVASCRIPT
+// =========================================
 
-// -----------------------------
-// Add To Cart Animation
-// -----------------------------
 
-const cartButtons = document.querySelectorAll(".card-buttons button");
+// =========================================
+// CART FUNCTIONS
+// =========================================
 
-cartButtons.forEach(button => {
+function getCart() {
 
-button.addEventListener("click", () => {
+    const savedCart =
+        localStorage.getItem("glamoraCart");
 
-const original = button.innerHTML;
+    if (!savedCart) {
+        return [];
+    }
 
-button.innerHTML = "✓ Added";
+    try {
 
-button.style.background = "#2ecc71";
+        return JSON.parse(savedCart);
 
-setTimeout(() => {
+    } catch (error) {
 
-button.innerHTML = original;
+        console.error(
+            "Unable to load cart:",
+            error
+        );
 
-button.style.background = "#111";
+        return [];
 
-},1500);
-
-});
-
-});
-
-// -----------------------------
-// Wishlist
-// -----------------------------
-
-const hearts = document.querySelectorAll(".card-buttons i");
-
-hearts.forEach(heart=>{
-
-heart.addEventListener("click",()=>{
-
-heart.classList.toggle("fas");
-
-heart.classList.toggle("far");
-
-heart.style.color="#e63946";
-
-});
-
-});
-
-// -----------------------------
-// Search Products
-// -----------------------------
-
-const searchInput=document.querySelector(".search-bar input");
-
-const cards=document.querySelectorAll(".product-card");
-
-searchInput.addEventListener("keyup",()=>{
-
-const value=searchInput.value.toLowerCase();
-
-cards.forEach(card=>{
-
-const title=card.querySelector("h3").innerText.toLowerCase();
-
-if(title.includes(value)){
-
-card.style.display="block";
-
-}else{
-
-card.style.display="none";
+    }
 
 }
 
-});
 
-});
+// =========================================
+// SAVE CART
+// =========================================
 
-// -----------------------------
-// Category Filter
-// -----------------------------
+function saveCart(cart) {
 
-const filters=document.querySelectorAll(".filter-box input[type='checkbox']");
-
-filters.forEach(filter=>{
-
-filter.addEventListener("change",()=>{
-
-const active=[];
-
-filters.forEach(item=>{
-
-if(item.checked){
-
-active.push(item.parentElement.innerText.toLowerCase());
+    localStorage.setItem(
+        "glamoraCart",
+        JSON.stringify(cart)
+    );
 
 }
 
-});
 
-cards.forEach(card=>{
+// =========================================
+// UPDATE CART COUNT
+// =========================================
 
-const title=card.querySelector("h3").innerText.toLowerCase();
+function updateCartCount() {
 
-if(active.length===0){
+    const cartCount =
+        document.getElementById(
+            "cartCount"
+        );
 
-card.style.display="block";
+    if (!cartCount) {
+        return;
+    }
 
-}else{
 
-let show=false;
+    const cart =
+        getCart();
 
-active.forEach(cat=>{
 
-if(title.includes(cat)){
+    const totalQuantity =
+        cart.reduce(
+            function (total, item) {
 
-show=true;
+                return total +
+                    Number(item.quantity || 0);
 
-}
+            },
+            0
+        );
 
-});
 
-card.style.display=show?"block":"none";
-
-}
-
-});
-
-});
-
-});
-
-// -----------------------------
-// Sort Products
-// -----------------------------
-
-const sort=document.querySelector(".shop-top select");
-
-sort.addEventListener("change",()=>{
-
-alert("Sorting feature will connect to backend later.");
-
-});
-
-// -----------------------------
-// Scroll To Top Button
-// -----------------------------
-
-const topBtn=document.createElement("button");
-
-topBtn.innerHTML="↑";
-
-document.body.appendChild(topBtn);
-
-topBtn.style.position="fixed";
-topBtn.style.right="30px";
-topBtn.style.bottom="30px";
-topBtn.style.width="50px";
-topBtn.style.height="50px";
-topBtn.style.borderRadius="50%";
-topBtn.style.border="none";
-topBtn.style.background="#111";
-topBtn.style.color="white";
-topBtn.style.fontSize="22px";
-topBtn.style.display="none";
-topBtn.style.cursor="pointer";
-topBtn.style.zIndex="999";
-
-window.addEventListener("scroll",()=>{
-
-if(window.scrollY>400){
-
-topBtn.style.display="block";
-
-}else{
-
-topBtn.style.display="none";
+    cartCount.textContent =
+        totalQuantity;
 
 }
 
-});
 
-topBtn.addEventListener("click",()=>{
+// =========================================
+// ADD PRODUCT TO CART
+// =========================================
 
-window.scrollTo({
+function addProductToCart(
+    productCard
+) {
 
-top:0,
+    const productId =
+        productCard.dataset.id;
 
-behavior:"smooth"
+    const productName =
+        productCard.dataset.name;
 
-});
+    const productPrice =
+        Number(
+            productCard.dataset.price
+        );
 
-});
+    const productImage =
+        productCard.dataset.image;
 
-// -----------------------------
-// Fade Products On Scroll
-// -----------------------------
 
-const observer=new IntersectionObserver(entries=>{
+    if (
+        !productId ||
+        !productName ||
+        !productPrice ||
+        !productImage
+    ) {
 
-entries.forEach(entry=>{
+        console.error(
+            "Product information is missing."
+        );
 
-if(entry.isIntersecting){
+        return;
 
-entry.target.style.opacity="1";
+    }
 
-entry.target.style.transform="translateY(0)";
+
+    const cart =
+        getCart();
+
+
+    const existingProduct =
+        cart.find(
+            function (item) {
+
+                return item.id === productId;
+
+            }
+        );
+
+
+    if (existingProduct) {
+
+        existingProduct.quantity += 1;
+
+    } else {
+
+        cart.push({
+
+            id:
+                productId,
+
+            name:
+                productName,
+
+            price:
+                productPrice,
+
+            image:
+                productImage,
+
+            quantity:
+                1
+
+        });
+
+    }
+
+
+    saveCart(cart);
+
+    updateCartCount();
 
 }
 
-});
 
-});
+// =========================================
+// ADD TO CART BUTTONS
+// =========================================
 
-cards.forEach(card=>{
+const addToCartButtons =
+    document.querySelectorAll(
+        ".add-to-cart"
+    );
 
-card.style.opacity="0";
 
-card.style.transform="translateY(40px)";
+addToCartButtons.forEach(
+    function (button) {
 
-card.style.transition=".8s";
+        button.addEventListener(
+            "click",
+            function () {
 
-observer.observe(card);
 
-});
+                const productCard =
+                    button.closest(
+                        ".product-card"
+                    );
 
-// -----------------------------
-// Newsletter
-// -----------------------------
 
-const form=document.querySelector(".newsletter form");
+                if (!productCard) {
 
-if(form){
+                    return;
 
-form.addEventListener("submit",(e)=>{
+                }
 
-e.preventDefault();
 
-alert("🎉 Welcome to Glamora!");
+                // Add product
 
-form.reset();
+                addProductToCart(
+                    productCard
+                );
 
-});
+
+                // Save original text
+
+                const originalText =
+                    button.innerHTML;
+
+
+                // Change button
+
+                button.innerHTML =
+                    '<i class="fas fa-check"></i> Added to Cart';
+
+
+                button.classList.add(
+                    "added"
+                );
+
+
+                // Restore button
+
+                setTimeout(
+                    function () {
+
+                        button.innerHTML =
+                            originalText;
+
+                        button.classList.remove(
+                            "added"
+                        );
+
+                    },
+                    1500
+                );
+
+            }
+        );
+
+    }
+);
+
+
+// =========================================
+// INITIAL CART COUNT
+// =========================================
+
+updateCartCount();
+
+
+// =========================================
+// WISHLIST BUTTONS
+// =========================================
+
+const wishlistButtons =
+    document.querySelectorAll(
+        ".product-card .fa-heart"
+    );
+
+
+wishlistButtons.forEach(
+    function (heart) {
+
+        heart.addEventListener(
+            "click",
+            function () {
+
+                heart.classList.toggle(
+                    "fas"
+                );
+
+                heart.classList.toggle(
+                    "far"
+                );
+
+            }
+        );
+
+    }
+);
+
+
+// =========================================
+// SEARCH
+// =========================================
+
+const searchInput =
+    document.querySelector(
+        ".search-bar input"
+    );
+
+
+const productCards =
+    document.querySelectorAll(
+        ".product-card"
+    );
+
+
+if (searchInput) {
+
+    searchInput.addEventListener(
+        "input",
+        function () {
+
+            const searchTerm =
+                searchInput.value
+                    .toLowerCase()
+                    .trim();
+
+
+            productCards.forEach(
+                function (card) {
+
+                    const name =
+                        card
+                            .dataset
+                            .name
+                            .toLowerCase();
+
+
+                    if (
+                        name.includes(
+                            searchTerm
+                        )
+                    ) {
+
+                        card.style.display =
+                            "";
+
+                    } else {
+
+                        card.style.display =
+                            "none";
+
+                    }
+
+                }
+            );
+
+        }
+    );
 
 }
 
-// -----------------------------
-// Header Shadow
-// -----------------------------
 
-const header=document.querySelector("header");
+// =========================================
+// SORT PRODUCTS
+// =========================================
 
-window.addEventListener("scroll",()=>{
+const sortSelect =
+    document.querySelector(
+        ".shop-top select"
+    );
 
-if(window.scrollY>30){
 
-header.style.boxShadow="0 8px 25px rgba(0,0,0,.12)";
+if (sortSelect) {
 
-}else{
+    sortSelect.addEventListener(
+        "change",
+        function () {
 
-header.style.boxShadow="0 4px 12px rgba(0,0,0,.08)";
+            const grid =
+                document.querySelector(
+                    ".product-grid"
+                );
+
+
+            if (!grid) {
+
+                return;
+
+            }
+
+
+            const cards =
+                Array.from(
+                    grid.querySelectorAll(
+                        ".product-card"
+                    )
+                );
+
+
+            const selected =
+                sortSelect.value;
+
+
+            if (
+                selected ===
+                "Price Low to High"
+            ) {
+
+                cards.sort(
+                    function (a, b) {
+
+                        return (
+                            Number(
+                                a.dataset.price
+                            ) -
+                            Number(
+                                b.dataset.price
+                            )
+                        );
+
+                    }
+                );
+
+            }
+
+
+            else if (
+                selected ===
+                "Price High to Low"
+            ) {
+
+                cards.sort(
+                    function (a, b) {
+
+                        return (
+                            Number(
+                                b.dataset.price
+                            ) -
+                            Number(
+                                a.dataset.price
+                            )
+                        );
+
+                    }
+                );
+
+            }
+
+
+            else if (
+                selected ===
+                "Newest"
+            ) {
+
+                // Newest products first
+
+                const newest =
+                    [
+                        "hydrating-toner",
+                        "retinol-renewal-cream",
+                        "brightening-eye-cream",
+                        "rose-water-mist",
+                        "clay-mask",
+                        "niacinamide-serum",
+                        "night-repair-cream",
+                        "spf-50-sunscreen",
+                        "glow-moisturizer",
+                        "hydrating-cleanser",
+                        "vitamin-c-serum"
+                    ];
+
+
+                cards.sort(
+                    function (a, b) {
+
+                        return (
+                            newest.indexOf(
+                                a.dataset.id
+                            ) -
+                            newest.indexOf(
+                                b.dataset.id
+                            )
+                        );
+
+                    }
+                );
+
+            }
+
+
+            else if (
+                selected ===
+                "Best Selling"
+            ) {
+
+                const bestSelling =
+                    [
+                        "vitamin-c-serum",
+                        "niacinamide-serum",
+                        "glow-moisturizer",
+                        "spf-50-sunscreen",
+                        "night-repair-cream",
+                        "hydrating-cleanser",
+                        "clay-mask",
+                        "hydrating-toner",
+                        "rose-water-mist",
+                        "brightening-eye-cream",
+                        "hydrating-lip-balm",
+                        "retinol-renewal-cream"
+                    ];
+
+
+                cards.sort(
+                    function (a, b) {
+
+                        return (
+                            bestSelling.indexOf(
+                                a.dataset.id
+                            ) -
+                            bestSelling.indexOf(
+                                b.dataset.id
+                            )
+                        );
+
+                    }
+                );
+
+            }
+
+
+            cards.forEach(
+                function (card) {
+
+                    grid.appendChild(
+                        card
+                    );
+
+                }
+            );
+
+        }
+    );
 
 }
 
-});
 
-console.log("✨ Glamora Shop Loaded Successfully");
+// =========================================
+// NEWSLETTER
+// =========================================
+
+const newsletterForm =
+    document.querySelector(
+        ".newsletter form"
+    );
+
+
+if (newsletterForm) {
+
+    newsletterForm.addEventListener(
+        "submit",
+        function (event) {
+
+            event.preventDefault();
+
+
+            const emailInput =
+                newsletterForm.querySelector(
+                    "input[type='email']"
+                );
+
+
+            if (
+                !emailInput ||
+                !emailInput.value.trim()
+            ) {
+
+                return;
+
+            }
+
+
+            alert(
+                "Thank you for joining the Glamora community! ✨"
+            );
+
+
+            emailInput.value = "";
+
+        }
+    );
+
+}
+
+
+// =========================================
+// PAGE LOADED
+// =========================================
+
+console.log(
+    "✨ Glamora Shop Loaded"
+);
