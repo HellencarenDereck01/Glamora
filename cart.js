@@ -10,87 +10,87 @@
 const cartProducts = {
 
     "vitamin-c-serum": {
-        name: "Vitamin C Glow Serum",
+        name: "Vitamin C Serum",
         category: "SERUM",
-        price: 24.99,
-        image: "vitamin-c-serum.png"
+        price: 34.99,
+        image: "vitamin c serum.png"
     },
 
     "hydrating-cleanser": {
         name: "Hydrating Cleanser",
         category: "CLEANSER",
-        price: 18.99,
-        image: "hydrating-cleanser.png"
+        price: 24.99,
+        image: "hydrating cleanser.png"
     },
 
     "glow-moisturizer": {
         name: "Glow Moisturizer",
         category: "MOISTURIZER",
-        price: 22.99,
-        image: "glow-moisturizer.png"
+        price: 29.99,
+        image: "glow moisturizer.png"
     },
 
     "spf-50-sunscreen": {
         name: "SPF 50 Sunscreen",
         category: "SUNSCREEN",
-        price: 19.99,
-        image: "spf-50-sunscreen.png"
+        price: 27.99,
+        image: "spf 50 sunscreen.png"
     },
 
     "night-repair-cream": {
         name: "Night Repair Cream",
         category: "MOISTURIZER",
-        price: 26.99,
-        image: "night-repair-cream.png"
+        price: 39.99,
+        image: "night repair cfream.png"
     },
 
     "niacinamide-serum": {
         name: "Niacinamide Serum",
         category: "SERUM",
-        price: 21.99,
-        image: "niacinamide-serum.png"
+        price: 32.99,
+        image: "niacinamide serum.png"
     },
 
     "clay-mask": {
-        name: "Clay Mask",
+        name: "Clay Face Mask",
         category: "FACE MASK",
-        price: 17.99,
-        image: "clay-mask.png"
+        price: 22.99,
+        image: "clay mask.png"
     },
 
     "hydrating-toner": {
         name: "Hydrating Toner",
         category: "TONER",
-        price: 16.99,
-        image: "hydrating-toner.png"
+        price: 25.99,
+        image: "hydrating toner.png"
     },
 
     "rose-water-mist": {
         name: "Rose Water Mist",
         category: "FACE MIST",
-        price: 15.99,
-        image: "rose-water-mist.png"
+        price: 19.99,
+        image: "rose water  mist.png"
     },
 
     "brightening-eye-cream": {
         name: "Brightening Eye Cream",
         category: "EYE CARE",
-        price: 23.99,
-        image: "brightening-eye-cream.png"
+        price: 29.99,
+        image: "brightening eye cream.png"
     },
 
     "hydrating-lip-balm": {
         name: "Hydrating Lip Balm",
         category: "LIP CARE",
-        price: 9.99,
-        image: "hydrating-lip-balm.png"
+        price: 14.99,
+        image: "lip balm.png"
     },
 
     "retinol-renewal-cream": {
         name: "Retinol Renewal Cream",
         category: "MOISTURIZER",
-        price: 27.99,
-        image: "retinol-renewal-cream.png"
+        price: 44.99,
+        image: "retinol.png"
     }
 
 };
@@ -251,12 +251,14 @@ function renderCart() {
 
         }
 
+
         if (cartItemLabel) {
 
             cartItemLabel.textContent =
                 "0 items";
 
         }
+
 
         updateSummary();
 
@@ -349,7 +351,8 @@ function renderCart() {
                             <button
                                 type="button"
                                 class="decrease-cart"
-                                data-id="${item.id}">
+                                data-id="${item.id}"
+                            >
 
                                 −
 
@@ -366,7 +369,8 @@ function renderCart() {
                             <button
                                 type="button"
                                 class="increase-cart"
-                                data-id="${item.id}">
+                                data-id="${item.id}"
+                            >
 
                                 +
 
@@ -378,7 +382,8 @@ function renderCart() {
                         <button
                             type="button"
                             class="remove-item"
-                            data-id="${item.id}">
+                            data-id="${item.id}"
+                        >
 
                             <i class="far fa-trash-can"></i>
 
@@ -445,6 +450,7 @@ function renderCart() {
 // =========================================
 
 function attachCartEvents() {
+
 
     // =====================================
     // INCREASE QUANTITY
@@ -552,6 +558,7 @@ function attachCartEvents() {
                                     item
                                 );
 
+
                             cart.splice(
                                 index,
                                 1
@@ -646,8 +653,10 @@ function updateSummary() {
 
 
                 return total +
-                    (product.price *
-                     item.quantity);
+                    (
+                        product.price *
+                        item.quantity
+                    );
 
             },
             0
@@ -748,10 +757,12 @@ const applyPromo =
         "applyPromo"
     );
 
+
 const promoCode =
     document.getElementById(
         "promoCode"
     );
+
 
 const promoMessage =
     document.getElementById(
@@ -852,6 +863,7 @@ if (applyPromo) {
             promoMessage.textContent =
                 "That promo code isn't valid.";
 
+
             updateSummary();
 
         }
@@ -947,6 +959,7 @@ quickAddButtons.forEach(
                 button.style.background =
                     "#111111";
 
+
                 button.style.color =
                     "#ffffff";
 
@@ -957,8 +970,10 @@ quickAddButtons.forEach(
                         button.textContent =
                             originalText;
 
+
                         button.style.background =
                             "";
+
 
                         button.style.color =
                             "";
@@ -1012,6 +1027,7 @@ wishlistButtons.forEach(
                             "far"
                         );
 
+
                         icon.classList.add(
                             "fas"
                         );
@@ -1021,6 +1037,7 @@ wishlistButtons.forEach(
                         icon.classList.remove(
                             "fas"
                         );
+
 
                         icon.classList.add(
                             "far"
@@ -1085,6 +1102,7 @@ const cartSearch =
     document.getElementById(
         "cartSearch"
     );
+
 
 const searchButton =
     document.getElementById(
@@ -1152,6 +1170,7 @@ const newsletterForm =
     document.getElementById(
         "newsletterForm"
     );
+
 
 const newsletterMessage =
     document.getElementById(
@@ -1221,47 +1240,62 @@ scrollButton.setAttribute(
 scrollButton.style.position =
     "fixed";
 
+
 scrollButton.style.right =
     "25px";
+
 
 scrollButton.style.bottom =
     "25px";
 
+
 scrollButton.style.width =
     "48px";
+
 
 scrollButton.style.height =
     "48px";
 
+
 scrollButton.style.border =
     "none";
+
 
 scrollButton.style.borderRadius =
     "50%";
 
+
 scrollButton.style.background =
     "#111";
+
 
 scrollButton.style.color =
     "#fff";
 
+
 scrollButton.style.fontSize =
     "16px";
+
 
 scrollButton.style.cursor =
     "pointer";
 
+
 scrollButton.style.display =
     "none";
+
 
 scrollButton.style.alignItems =
     "center";
 
+
 scrollButton.style.justifyContent =
     "center";
 
+
 scrollButton.style.zIndex =
     "999";
+
 
 scrollButton.style.boxShadow =
     "0 5px 20px rgba(0,0,0,.15)";
@@ -1349,6 +1383,7 @@ if (header) {
 updateCartCount();
 
 renderCart();
+
 
 console.log(
     "✨ Glamora Cart Loaded"
