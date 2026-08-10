@@ -1388,3 +1388,4 @@ renderCart();
 console.log(
     "✨ Glamora Cart Loaded"
 );
+/* cart */
